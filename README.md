@@ -9,10 +9,11 @@ This repository is a place to hold code and tables for a process that is attempt
 
 Data will be collected from:
 
-- Long Read Data [Zhang et. al. 2022](ftp://ftp.agis.org.cn/∼fanwei/Chicken_gut_metagenome_Hifi/.) 
+- Long Read Data 
 
+    [Zhang et. al. 2022](ftp://ftp.agis.org.cn/∼fanwei/Chicken_gut_metagenome_Hifi/.) 
     - [paper citation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9673493/)
 
-- Short Read Data [Huang et. al. 2018](ftp://ftp.agis.org.cn/~fanwei/Chicken_gut_metagenome) 
-
+- Short Read Data 
+    [Huang et. al. 2018](ftp://ftp.agis.org.cn/~fanwei/Chicken_gut_metagenome) 
     - [paper citation](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6260706/)
