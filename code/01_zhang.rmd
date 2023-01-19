@@ -1,0 +1,30 @@
+#!/usr/bin/env Rscript
+
+```r function for parsing silva taxonomy
+library(phyloseq)
+parse_tax_GTDBTK <- function(row){
+
+    tax_list <- phyloseq::parse_taxonomy_qiime(row)
+    old_col <- colnames(t(data.frame(tax_list)))
+    tax_row <- t(data.frame(tax_list))
+    old_col[1] <-"Kingdom"
+    new_col <- old_col
+    colnames(tax_row) <- new_col
+    rownames(tax_row) <- ""
+    return(tax_row)
+
+}
+
+
+```
+
+```R load data into memory
+library(tidyverse)
+library(phyloseq)
+library(readr)
+
+zhang_95 <- read_table("../data/zhang-2022/zhang_2022_ANI95_summary_nr.tsv")
+
+parse_tax_GTDBTK(zhang_95$GTDBTK_classification[1])
+
+```
