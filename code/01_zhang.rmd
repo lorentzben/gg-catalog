@@ -67,4 +67,10 @@ colnames(jejunum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus"
 colnames(ileum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
 colnames(cecum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
 colnames(rectum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
+
+write.csv(duodenum, '../output/zhang/zhang_2022_ANI99_duodenum.csv',row.names=F)
+write.csv(jejunum, '../output/zhang/zhang_2022_ANI99_jejunum.csv',row.names=F)
+write.csv(ileum, '../output/zhang/zhang_2022_ANI99_ileum.csv',row.names=F)
+write.csv(cecum, '../output/zhang/zhang_2022_ANI99_cecum.csv',row.names=F)
+write.csv(rectum, '../output/zhang/zhang_2022_ANI99_rectum.csv',row.names=F)
 ```
