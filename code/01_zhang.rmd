@@ -7,6 +7,7 @@ parse_tax_GTDBTK <- function(row){
     tax_list <- phyloseq::parse_taxonomy_qiime(row)
     old_col <- colnames(t(data.frame(tax_list)))
     tax_row <- t(data.frame(tax_list))
+    tax_row[tax_row == ""] <- "Unidentified"
     old_col[1] <-"Kingdom"
     new_col <- old_col
     colnames(tax_row) <- new_col
@@ -14,8 +15,6 @@ parse_tax_GTDBTK <- function(row){
     return(tax_row)
 
 }
-
-
 ```
 
 ```R load data into memory
@@ -23,8 +22,49 @@ library(tidyverse)
 library(phyloseq)
 library(readr)
 
-zhang_95 <- read_table("../data/zhang-2022/zhang_2022_ANI95_summary_nr.tsv")
+zhang_99 <- read_table("../data/zhang-2022/zhang_2022_ANI99_summary_nr.tsv")
 
-parse_tax_GTDBTK(zhang_95$GTDBTK_classification[1])
+duodenum <- c()
+jejunum <- c()
+ileum <- c()
+cecum <- c()
+rectum <- c()
 
+for(i in 1:nrow(zhang_99)) {
+    row_to_add <- c()
+    tax_cols <- c()
+    row <- zhang_99[i,]
+    if (row$Intestinal_fragment == "Duodenum"){
+        mag <- zhang_99[i,1][[1]]
+        tax_cols <- parse_tax_GTDBTK(zhang_99[i,12][[1]])
+        row_to_add <- cbind(mag, tax_cols)
+        duodenum <- rbind(duodenum, row_to_add)
+    } else if (row$Intestinal_fragment == "jejunum" ){
+        mag <- zhang_99[i,1][[1]]
+        tax_cols <- parse_tax_GTDBTK(zhang_99[i,12][[1]])
+        row_to_add <- cbind(mag, tax_cols)
+        jejunum <- rbind(jejunum, row_to_add)
+    } else if (row$Intestinal_fragment == "Ileum" ) {
+        mag <- zhang_99[i,1][[1]]
+        tax_cols <- parse_tax_GTDBTK(zhang_99[i,12][[1]])
+        row_to_add <- cbind(mag, tax_cols)
+        ileum <- rbind(ileum, row_to_add)
+    } else if (row$Intestinal_fragment == "Cecum") {
+        mag <- zhang_99[i,1][[1]]
+        tax_cols <- parse_tax_GTDBTK(zhang_99[i,12][[1]])
+        row_to_add <- cbind(mag, tax_cols)
+        cecum <- rbind(cecum, row_to_add)
+    } else if (row$Intestinal_fragment == "Rectum"){
+        mag <- zhang_99[i,1][[1]]
+        tax_cols <- parse_tax_GTDBTK(zhang_99[i,12][[1]])
+        row_to_add <- cbind(mag, tax_cols)
+        rectum <- rbind(rectum, row_to_add)
+    }
+}
+
+colnames(duodenum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
+colnames(jejunum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
+colnames(ileum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
+colnames(cecum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
+colnames(rectum) <- c("Mag","Kingdom","Phylum","Class","Order","Family","Genus","Species")
 ```
