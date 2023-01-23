@@ -22,7 +22,7 @@ parse_tax_GTDBTK <- function(row){
 library(tidyverse)
 library(phyloseq)
 library(readr)
-data\huang-2018\CGM-RGC.CARMA.gene.taxonomy.abundance.species.ratio
+
 
 #huang_species <- read_table('../data/huang-2018/CGM-RGC.CARMA.gene.taxonomy.abundance.species.ratio')
 huang_species <- data.frame(read.csv('../data/huang-2018/CGM-RGC.CARMA.gene.taxonomy.abundance.species.ratio',sep='\t'))
@@ -49,5 +49,21 @@ huang_species_row <- huang_species_row[2:496,]
 huang_genus_row <- t(huang_genus)
 colnames(huang_genus_row) <- huang_genus_row[1,]
 huang_genus_row <- huang_genus_row[2:496,]
+
+
+huang_species_duo <- c()
+duo_samp_vec <- c()
+for ( i in 1:length(rownames(huang_species_row)) ){
+    tissue = substring(rownames(huang_species_row)[i],5,5)
+    
+    if(tissue == "D"){
+        sample <- char(rownames(huang_species_row)[i])
+        huang_species_duo <- cbind(huang_species_duo,huang_species_row[i,])
+        duo_samp_vec <- c(duo_samp_vec, sample)
+    }
+}
+
+colnames(huang_species_duo) <- duo_samp_vec
+    
 
 ```
