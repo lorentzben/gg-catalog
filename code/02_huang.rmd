@@ -114,7 +114,10 @@ write.csv(huang_species_ile, '../output/huang/huang_2018_species_ileum.csv')
 write.csv(huang_species_ceca, '../output/huang/huang_2018_species_cecum.csv')
 write.csv(huang_species_rect, '../output/huang/huang_2018_species_rectum.csv')
 ```
-```r check that the relative abundances make sense and check out diversity
+
+
+
+```r parallel process for genus
 library(tidyverse)
 library(phyloseq)
 
@@ -124,5 +127,103 @@ ile_sums <- colSums(huang_species_ile)
 ceca_sums <- colSums(huang_species_ceca)
 rect_sums <- colSums(huang_species_rect)
 
+# Parallel the Species Process with genus to compare shannon divs
+
+huang_genus_row <- t(huang_genus)
+colnames(huang_genus_row) <- huang_genus_row[1,]
+huang_genus_row <- huang_genus_row[2:496,]
+
+huang_genus_duo <- c()
+duo_samp_vec <- c()
+huang_genus_jeju <- c()
+jeju_samp_vec <- c()
+huang_genus_ile <- c()
+ile_samp_vec <- c()
+huang_genus_ceca <- c()
+ceca_samp_vec <- c()
+huang_genus_rect <- c()
+rect_samp_vec <- c()
+
+for ( i in 1:length(rownames(huang_genus_row)) ){
+    tissue = substring(rownames(huang_genus_row)[i],5,5)
+    
+    if(tissue == "D"){
+        sample <- char(rownames(huang_genus_row)[i])
+        huang_genus_duo <- cbind(huang_genus_duo,huang_genus_row[i,])
+        duo_samp_vec <- c(duo_samp_vec, sample)
+    }
+    if(tissue == "J"){
+        sample <- char(rownames(huang_genus_row)[i])
+        huang_genus_jeju <- cbind(huang_genus_jeju,huang_genus_row[i,])
+        jeju_samp_vec <- c(jeju_samp_vec, sample)
+    }
+    if(tissue == "I"){
+        sample <- char(rownames(huang_genus_row)[i])
+        huang_genus_ile <- cbind(huang_genus_ile,huang_genus_row[i,])
+        ile_samp_vec <- c(ile_samp_vec, sample)
+    }
+    if(tissue == "C"){
+        sample <- char(rownames(huang_genus_row)[i])
+        huang_genus_ceca <- cbind(huang_genus_ceca,huang_genus_row[i,])
+        ceca_samp_vec <- c(ceca_samp_vec, sample)
+    }
+    if(tissue == "R"){
+        sample <- char(rownames(huang_genus_row)[i])
+        huang_genus_rect <- cbind(huang_genus_rect,huang_genus_row[i,])
+        rect_samp_vec <- c(rect_samp_vec, sample)
+    }
+}
+
+colnames(huang_genus_duo) <- duo_samp_vec
+colnames(huang_genus_jeju) <- jeju_samp_vec
+colnames(huang_genus_ile) <- ile_samp_vec
+colnames(huang_genus_ceca) <- ceca_samp_vec
+colnames(huang_genus_rect) <- rect_samp_vec
+    
+huang_genus_duo <- data.frame(huang_genus_duo) %>%
+    mutate_all(as.numeric)
+huang_genus_jeju <- data.frame(huang_genus_jeju) %>%
+    mutate_all(as.numeric)
+huang_genus_ile <- data.frame(huang_genus_ile) %>%
+    mutate_all(as.numeric)
+huang_genus_ceca <- data.frame(huang_genus_ceca) %>%
+    mutate_all(as.numeric)
+huang_genus_rect <- data.frame(huang_genus_rect) %>%
+    mutate_all(as.numeric)
+
+write.csv(huang_genus_duo, '../output/huang/huang_2018_genus_duodenum.csv')
+write.csv(huang_genus_jeju, '../output/huang/huang_2018_genus_jejunum.csv')
+write.csv(huang_genus_ile, '../output/huang/huang_2018_genus_ileum.csv')
+write.csv(huang_genus_ceca, '../output/huang/huang_2018_genus_cecum.csv')
+write.csv(huang_genus_rect, '../output/huang/huang_2018_genus_rectum.csv')
+
+duo_g_sums <- colSums(huang_genus_duo)
+jeju_g_sums <- colSums(huang_genus_jeju)
+ile_g_sums <- colSums(huang_genus_ile)
+ceca_g_sums <- colSums(huang_genus_ceca)
+rect_g_sums <- colSums(huang_genus_rect)
+
+```
+
+
+```r check diversity 
+
+huang_diversity <- data.frame(read.csv('../data/huang-2018/CGM-RGC.shannon_index.xls',sep='\t'))
+
+paper_shannon <- huang_diversity[2,] 
+rownames(paper_shannon) <- paper_shannon[1,1]
+paper_shannon <- paper_shannon[,2:length(paper_shannon)]
+
+
+
+huang_duo_div <- diversity(t(huang_genus_duo),index="shannon")
+huang_jeju_div <- diversity(t(huang_genus_jeju),index="shannon")
+huang_ile_div <- diversity(t(huang_genus_ile),index="shannon")
+huang_ceca_div <- diversity(t(huang_genus_ceca),index="shannon")
+huang_rect_div <- diversity(t(huang_genus_rect),index="shannon")
+
+shannon_mine <- c(huang_duo_div, huang_jeju_div, huang_ile_div, huang_ceca_div, huang_rect_div)
+
+compare_shannon <- rbind(paper_shannon, t(data.frame(shannon_mine)))
 
 ```
