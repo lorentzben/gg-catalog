@@ -97,10 +97,32 @@ colnames(huang_species_ile) <- ile_samp_vec
 colnames(huang_species_ceca) <- ceca_samp_vec
 colnames(huang_species_rect) <- rect_samp_vec
     
+huang_species_duo <- data.frame(huang_species_duo) %>%
+    mutate_all(as.numeric)
+huang_species_jeju <- data.frame(huang_species_jeju) %>%
+    mutate_all(as.numeric)
+huang_species_ile <- data.frame(huang_species_ile) %>%
+    mutate_all(as.numeric)
+huang_species_ceca <- data.frame(huang_species_ceca) %>%
+    mutate_all(as.numeric)
+huang_species_rect <- data.frame(huang_species_rect) %>%
+    mutate_all(as.numeric)
 
 write.csv(huang_species_duo, '../output/huang/huang_2018_species_duodenum.csv')
 write.csv(huang_species_jeju, '../output/huang/huang_2018_species_jejunum.csv')
 write.csv(huang_species_ile, '../output/huang/huang_2018_species_ileum.csv')
 write.csv(huang_species_ceca, '../output/huang/huang_2018_species_cecum.csv')
 write.csv(huang_species_rect, '../output/huang/huang_2018_species_rectum.csv')
+```
+```r check that the relative abundances make sense and check out diversity
+library(tidyverse)
+library(phyloseq)
+
+duo_sums <- colSums(huang_species_duo)
+jeju_sums <- colSums(huang_species_jeju)
+ile_sums <- colSums(huang_species_ile)
+ceca_sums <- colSums(huang_species_ceca)
+rect_sums <- colSums(huang_species_rect)
+
+
 ```
