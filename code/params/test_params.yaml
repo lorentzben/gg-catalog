@@ -1,3 +1,3 @@
-input: "/reads"
+input: "/home/bjl34716/my_utils/gg-catalog/code/reads"
 #metadata: "metadata.tsv"
 outdir: "results"
