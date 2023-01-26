@@ -15,11 +15,11 @@
 ml SRA-Toolkit/2.11.1-centos_linux64
 SUBDIR=$(pwd)
 
-if [[ ! -d /work/sealab/bjl34716/gg-catalog/zhang/reads ]]; then
-    mkdir -p /work/sealab/bjl34716/gg-catalog/zhang/reads
+if [[ ! -d /scratch/bjl34716/gg-catalog/zhang/reads ]]; then
+    mkdir -p /scratch/bjl34716/gg-catalog/zhang/reads
 fi
 
-cd /work/sealab/bjl34716/gg-catalog/zhang/reads
+cd /scratch/bjl34716/gg-catalog/zhang/reads
 
 #duodenum SRR19683891 
 #jejunum SRR19732514 SRR19726169 
