@@ -28,5 +28,6 @@ nextflow run lorentzben/gg-catalog-nf \
         -profile slurm,singularity \
         -params-file /home/bjl34716/my_utils/gg-catalog/code/params/test_params.yaml \
         -resume
+        -latest
         
 
