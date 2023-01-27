@@ -1,0 +1,8 @@
+sampleID	forwardReads	run
+cecum	/scratch/bjl34716/gg-catalog/zhang/reads/cecum/SRR15214153.fastq	A
+colorectum	/scratch/bjl34716/gg-catalog/zhang/reads/colorectum/SRR19683890.fastq	A
+colorectum	/scratch/bjl34716/gg-catalog/zhang/reads/colorectum/SRR19732729.fastq	A
+duodenum	/scratch/bjl34716/gg-catalog/zhang/reads/duodenum/SRR19683891.fastq	A
+ileum	/scratch/bjl34716/gg-catalog/zhang/reads/ileum/SRR19736685.fastq	A
+jejunum	/scratch/bjl34716/gg-catalog/zhang/reads/jejunum/SRR19726169.fastq	A
+jejunum	/scratch/bjl34716/gg-catalog/zhang/reads/jejunum/SRR19732514.fastq	A
