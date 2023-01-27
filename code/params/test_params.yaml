@@ -1,5 +1,5 @@
-input: "/home/bjl34716/my_utils/gg-catalog/code/metadata.tsv"
+input: "/home/bjl34716/my_utils/gg-catalog/code/mapping.tsv"
 pacbio: "true"
 extension: "/*.fastq"
-#metadata: "metadata.tsv"
+metadata: "/home/bjl34716/my_utils/gg-catalog/code/metadata.tsv"
 outdir: "results"
