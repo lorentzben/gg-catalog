@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --nodes=1
 #SBATCH --time=96:00:00
-#SBATCH --mem=16gb
+#SBATCH --mem=32gb
 
 #Replace this with your UGA email to get notified on completion
 #SBATCH --mail-user="bjl34716@uga.edu"
