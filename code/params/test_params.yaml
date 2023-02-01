@@ -1,4 +1,5 @@
 input: "/home/bjl34716/my_utils/gg-catalog/code/mapping.tsv"
+contam: "/home/bjl34716/my_utils/gg-catalog/code/contam.tsv"
 pacbio: "true"
 extension: "/*.fastq"
 metadata: "/home/bjl34716/my_utils/gg-catalog/code/metadata.tsv"
