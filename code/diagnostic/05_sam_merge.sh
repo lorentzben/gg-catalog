@@ -14,4 +14,20 @@
 
 cd /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref
 
-singularity run docker://lorentzb/samtools samtools merge */*.sam 
+# sort gal-gal
+
+singularity run docker://lorentzb/samtools samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/gal-gal/SRR15214153_gal_gal.sam -o /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/gal-gal/SRR15214153_gal_gal_sorted.sam
+
+# sort glycine-max
+
+singularity run docker://lorentzb/samtools samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/glycine-max/SRR15214153_glycine_max.sam -o /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/glycine-max/SRR15214153_glycine_max_sorted.sam
+
+# sort zea-mays
+
+singularity run docker://lorentzb/samtools samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/zea-mays/SRR15214153_zea_mays.sam -o /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/zea-mays/SRR15214153_zea_mays_sorted.sam
+
+# merge sams
+
+singularity run docker://lorentzb/samtools samtools merge merged_reads.sam */*_sorted.sam 
+
+
