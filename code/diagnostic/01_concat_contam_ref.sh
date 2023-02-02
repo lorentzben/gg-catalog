@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --partition=batch
-#SBATCH --job-name=MINIMAP2_CONCAT
+#SBATCH --job-name=01_MINIMAP2_CONCAT
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --nodes=1
@@ -14,4 +14,6 @@
 
 cd /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/concat-ref
 
-singularity run docker://lorentzb/minimap2:1.0 minimap2 -ax map-hifi contam-refs.fna.gz /scratch/bjl34716/gg-catalog/zhang/reads/cecum/SRR15214153.fastq > SRR15214153.sam
+#cat /scratch/bjl34716/gg-catalog/refs/*.fna.gz > contam-refs.fna.gz
+
+singularity run docker://lorentzb/minimap2:1.0 minimap2 -ax map-hifi contam-refs.fna.gz /scratch/bjl34716/gg-catalog/zhang/reads/cecum/SRR15214153.fastq > SRR15214153_concat.sam
