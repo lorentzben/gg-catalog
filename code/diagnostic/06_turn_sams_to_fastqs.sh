@@ -16,8 +16,10 @@ cd /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref
 
 # create fastq for the individual reads
 
-singularity run docker://lorentzb/samtools samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/merged_reads.sam | samtools view -f 4 | samtools fastq -s R0 -1 R1 -2 R2
+singularity shell docker://lorentzb/samtools 
+
+samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/indv-ref/merged_reads.sam | samtools view -f 4 | samtools fastq -s R0 -1 R1 -2 R2
 
 cd /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/concat-ref
 
-singularity run docker://lorentzb/samtools samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/concat-ref/SRR15214153.sam | samtools view -f 4 | samtools fastq -s R0 -1 R1 -2 R2
+samtools sort /scratch/bjl34716/nf_dev/gg-catalog/compare-minimap/concat-ref/SRR15214153.sam > samtools view -f 4 > samtools fastq -s R0 -1 R1 -2 R2
