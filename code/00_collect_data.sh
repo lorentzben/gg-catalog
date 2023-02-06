@@ -76,3 +76,5 @@ wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/902/167/145/GCF_902167145.1_Zm
 
 # collect soybean genome from NCBI
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/004/515/GCF_000004515.6_Glycine_max_v4.0/GCF_000004515.6_Glycine_max_v4.0_genomic.fna.gz -O GlycineMax-reference.fna.gz
+
+cat /scratch/bjl34716/gg-catalog/refs/*.fna.gz > /scratch/bjl34716/gg-catalog/refs/concat-gal-zea-glycine.fna.gz
