@@ -1,4 +1,2 @@
 sampleID	forwardReads
-galgal	/scratch/bjl34716/gg-catalog/refs/GalGal-reference.fna.gz
-zeamays	/scratch/bjl34716/gg-catalog/refs/ZeaMays-reference.fna.gz
-glycinemax	/scratch/bjl34716/gg-catalog/refs/GlycineMax-reference.fna.gz
+combined	/scratch/bjl34716/gg-catalog/refs/GalGal-reference.fna.gz
