@@ -1,0 +1,6 @@
+sampleID	forwardReads
+duodenum	/scratch/bjl34716/gg-catalog/zhang/reads/duodenum/duodenum.fastq
+jejunum	/scratch/bjl34716/gg-catalog/zhang/reads/jejunum/jejunum.fastq
+ileum	/scratch/bjl34716/gg-catalog/zhang/reads/ileum/ileum.fastq
+cecum	/scratch/bjl34716/gg-catalog/zhang/reads/cecum/cecum.fastq
+colorectum	/scratch/bjl34716/gg-catalog/zhang/reads/colorectum/colorectum.fastq
