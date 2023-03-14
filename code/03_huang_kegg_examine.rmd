@@ -1,5 +1,14 @@
 #!/usr/bin/env Rscript
 
+Uses the docker image rocker/verse:4.2
+
 ```{r load packages needed}
+
+library(tidyverse)
+
+kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
+
+gene_abundance <- read_table("../data/huang-2018/03.profiles/00.relative.gene.abundance/CGM-RGC.gene.relative.abundance.tsv")
+
 
 ```
