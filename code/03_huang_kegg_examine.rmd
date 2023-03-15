@@ -5,10 +5,20 @@ Uses the docker image rocker/verse:4.2
 ```{r load packages needed}
 
 library(tidyverse)
+library(stringr)
 
 kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
 
+kegg_gene$ListOfKOs <- str_sub(kegg_gene$ListOfKOs, end=-2)
+
 gene_abundance <- read_table("../data/huang-2018/03.profiles/00.relative.gene.abundance/CGM-RGC.gene.relative.abundance.tsv")
 
+keggs_of_interest <- unique(read_table("../data/huang-2018/keggs_of_interest.tsv"))
 
+
+#keggs_of_interest$KO %in% kegg_gene$ListOfKOs
+
+selected <- kegg_gene[ kegg_gene$ListOfKOs %in% keggs_of_interest$KO,]
+
+with_abundance <- merge(selected, gene_abundance, by.x="#gene_id", by.y="#",all.x=TRUE, all.y=TRUE)
 ```
