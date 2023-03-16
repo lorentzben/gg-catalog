@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-Uses the docker image rocker/verse:4.2
+Uses the docker image rocker/tidyverse:4.2
 
 ```{r load packages needed}
 
@@ -11,16 +11,20 @@ kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene
 
 kegg_gene$ListOfKOs <- str_sub(kegg_gene$ListOfKOs, end=-2)
 
-gene_abundance <- read_table("../data/huang-2018/03.profiles/00.relative.gene.abundance/CGM-RGC.gene.relative.abundance.tsv")
+keggs_of_interest <- unique(read_table("../data/huang-2018/keggs_of_interest.tsv"))
 
-keggs_of_interest <- unique(read_table("../data/huang-2018/keggs_of_interest.tsv"))nj
+kegg_abundance <- read_table("../data/huang-2018/03.profiles/02.relative.KEGG.abundance/CGM-RGC.gene.abundance.xls.KEGG.KO.ratio")
 
+#missing_kegg <- their_kegg_abundance[!(their_kegg_abundance$"#KEGG"  %in% kegg_gene$"ListOfKOs"),]
 
 #keggs_of_interest$KO %in% kegg_gene$ListOfKOs
 
 selected <- kegg_gene[ kegg_gene$ListOfKOs %in% keggs_of_interest$KO,]
 
-selected_genes <- gene_abundance[ keggs_of_interest$"#gene_id" %in% kegg_gene$"#" ]
+genes_of_interest <- selected$"ListOfKOs"
 
-with_abundance <- merge(selected, gene_abundance, by.x="#gene_id", by.y="#",all.x=TRUE, all.y=TRUE)
+selected_abundance <- kegg_abundance[kegg_abundance$"#KEGG" %in% genes_of_interest, ]
+
+more_info <- merge(selected, selected_abundance)
+
 ```
