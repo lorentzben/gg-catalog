@@ -6,6 +6,7 @@ Uses the docker image rocker/tidyverse:4.2
 
 library(tidyverse)
 library(stringr)
+library(data.table)
 
 kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
 
@@ -25,6 +26,9 @@ genes_of_interest <- selected$"ListOfKOs"
 
 selected_abundance <- kegg_abundance[kegg_abundance$"#KEGG" %in% genes_of_interest, ]
 
-more_info <- merge(selected, selected_abundance)
+selected_df <- data.table(selected)
+selected_abundance_df <- data.table(selected_abundance)
+
+more_info <- merge(selected_df, selected_abundance_df, by.x="ListOfKOs", by.y="#KEGG")
 
 ```
