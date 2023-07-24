@@ -1,0 +1,192 @@
+#!/usr/bin/env Rscript
+
+Uses the docker image rocker/tidyverse:4.2
+
+```{r load packages needed}
+library(tidyverse)
+library(stringr)
+library(data.table)
+
+kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
+
+kegg_gene$ListOfKOs <- str_sub(kegg_gene$ListOfKOs, end=-2)
+
+#TODO update path with proper keggs of interest
+keggs_of_interest <- unique(read_table("../"))
+
+kegg_abundance <- read_table("../data/huang-2018/03.profiles/02.relative.KEGG.abundance/CGM-RGC.gene.abundance.xls.KEGG.KO.ratio")
+
+selected <- kegg_gene[ kegg_gene$ListOfKOs %in% keggs_of_interest$KO,]
+
+genes_of_interest <- selected$"ListOfKOs"
+
+selected_abundance <- kegg_abundance[kegg_abundance$"#KEGG" %in% genes_of_interest, ]
+
+selected_df <- data.table(selected)
+selected_abundance_df <- data.table(selected_abundance)
+
+more_info <- merge(selected_df, selected_abundance_df, by.x="ListOfKOs", by.y="#KEGG")
+
+write_tsv(more_info,"../output/huang/kegg-gene-abundance.tsv")
+```
+
+```{r duodenum average kegg abundances}
+library(tidyverse)
+
+
+#select just gene names from kegg table so we can join on them later
+
+kegg_tab <- read_table("../output/huang/kegg-gene-abundance.tsv")
+kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
+kegg_simp <- kegg_simp[,1]
+
+# reassing gene names to 
+kegg_tab$simple_kegg <- kegg_simp
+
+#select cols with ceca in the 5th english letter
+
+duo_samp <- kegg_tab[,str_sub(colnames(kegg_tab),5,5) == "D"]
+
+n_samp <- dim(duo_samp)[2]
+
+abund <- rowSums(duo_samp)
+
+abund <- abund/n_samp
+
+duo_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,abund)
+
+duo_average_df <- data.frame(duo_average_table)
+colnames(duo_average_df) <- c("kegg", "gene", "abundance")
+
+
+write_tsv(duo_average_df,"../output/huang/duo-average-gene-abundance.tsv")
+```
+
+```{r jejunum subset kegg abundances}
+
+library(tidyverse)
+
+
+#select just gene names from kegg table so we can join on them later
+
+kegg_tab <- read_table("../output/huang/kegg-gene-abundance.tsv")
+kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
+kegg_simp <- kegg_simp[,1]
+
+# reassing gene names to 
+kegg_tab$simple_kegg <- kegg_simp
+
+#select cols with ceca in the 5th english letter
+
+jeju_samp <- kegg_tab[,str_sub(colnames(kegg_tab),5,5) == "J"]
+
+n_samp <- dim(jeju_samp)[2]
+
+abund <- rowSums(jeju_samp)
+
+abund <- abund/n_samp
+
+jeju_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,abund)
+
+jeju_average_df <- data.frame(jeju_average_table)
+colnames(jeju_average_df) <- c("kegg", "gene", "abundance")
+
+
+write_tsv(jeju_average_df,"../output/huang/jeju-average-gene-abundance.tsv")
+```
+
+```{r ileum subset keggs}
+library(tidyverse)
+
+
+#select just gene names from kegg table so we can join on them later
+
+kegg_tab <- read_table("../output/huang/kegg-gene-abundance.tsv")
+kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
+kegg_simp <- kegg_simp[,1]
+
+# reassing gene names to 
+kegg_tab$simple_kegg <- kegg_simp
+
+#select cols with ceca in the 5th english letter
+
+ileum_samp <- kegg_tab[,str_sub(colnames(kegg_tab),5,5) == "I"]
+
+n_samp <- dim(ileum_samp)[2]
+
+abund <- rowSums(ileum_samp)
+
+abund <- abund/n_samp
+
+ileum_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,abund)
+
+ileum_average_df <- data.frame(ileum_average_table)
+colnames(ileum_average_df) <- c("kegg", "gene", "abundance")
+
+
+write_tsv(ileum_average_df,"../output/huang/ileum-average-gene-abundance.tsv")
+```
+
+```{r colorectum subset keggs}
+library(tidyverse)
+
+
+#select just gene names from kegg table so we can join on them later
+
+kegg_tab <- read_table("../output/huang/kegg-gene-abundance.tsv")
+kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
+kegg_simp <- kegg_simp[,1]
+
+# reassing gene names to 
+kegg_tab$simple_kegg <- kegg_simp
+
+#select cols with ceca in the 5th english letter
+
+rect_samp <- kegg_tab[,str_sub(colnames(kegg_tab),5,5) == "R"]
+
+n_samp <- dim(rect_samp)[2]
+
+abund <- rowSums(rect_samp)
+
+abund <- abund/n_samp
+
+rect_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,abund)
+
+rect_average_df <- data.frame(rect_average_table)
+colnames(rect_average_df) <- c("kegg", "gene", "abundance")
+
+
+write_tsv(rect_average_df,"../output/huang/rect-average-gene-abundance.tsv")
+```
+
+```{r ceca subset keggs}
+library(tidyverse)
+
+
+#select just gene names from kegg table so we can join on them later
+
+kegg_tab <- read_table("../output/huang/kegg-gene-abundance.tsv")
+kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
+kegg_simp <- kegg_simp[,1]
+
+# reassing gene names to 
+kegg_tab$simple_kegg <- kegg_simp
+
+#select cols with ceca in the 5th english letter
+
+ceca_samp <- kegg_tab[,str_sub(colnames(kegg_tab),5,5) == "C"]
+
+n_samp <- dim(ceca_samp)[2]
+
+abund <- rowSums(ceca_samp)
+
+abund <- abund/n_samp
+
+ceca_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,abund)
+
+ceca_average_df <- data.frame(ceca_average_table)
+colnames(ceca_average_df) <- c("kegg", "gene", "abundance")
+
+
+write_tsv(ceca_average_df,"../output/huang/ceca-average-gene-abundance.tsv")
+```

@@ -33,4 +33,4 @@ more_info <- merge(selected_df, selected_abundance_df, by.x="ListOfKOs", by.y="#
 
 write_tsv(more_info,"../output/huang/kegg-gene-abundance.tsv")
 
-```
+``` 
