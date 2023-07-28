@@ -1,0 +1,557 @@
+﻿entry,name,orthology,orthology_name
+ko04974,Protein digestion and absorption,K06002,pepsin A [EC:3.4.23.1]
+ko04974,Protein digestion and absorption,K01312,trypsin [EC:3.4.21.4]
+ko04974,Protein digestion and absorption,K01310,chymotrypsin [EC:3.4.21.1]
+ko04974,Protein digestion and absorption,K09632,chymotrypsin-like protease [EC:3.4.21.-]
+ko04974,Protein digestion and absorption,K01346,pancreatic elastase II [EC:3.4.21.71]
+ko04974,Protein digestion and absorption,K01345,pancreatic endopeptidase E [EC:3.4.21.70]
+ko04974,Protein digestion and absorption,K08779,carboxypeptidase A1 [EC:3.4.17.1]
+ko04974,Protein digestion and absorption,K01298,carboxypeptidase A2 [EC:3.4.17.15]
+ko04974,Protein digestion and absorption,K08780,carboxypeptidase A3 [EC:3.4.17.1]
+ko04974,Protein digestion and absorption,K01291,carboxypeptidase B [EC:3.4.17.2]
+ko04974,Protein digestion and absorption,K01300,carboxypeptidase B2 [EC:3.4.17.20]
+ko04974,Protein digestion and absorption,K12040,solute carrier family 9 (sodium/hydrogen exchanger); member 3
+ko04974,Protein digestion and absorption,K14206,solute carrier family 15 (oligopeptide transporter); member 1
+ko04974,Protein digestion and absorption,K01539,sodium/potassium-transporting ATPase subunit alpha [EC:7.2.2.13]
+ko04974,Protein digestion and absorption,K01540,sodium/potassium-transporting ATPase subunit beta
+ko04974,Protein digestion and absorption,K01538,sodium/potassium-transporting ATPase subunit gamma (FXYD domain-containing ion transport regulator 2)
+ko04974,Protein digestion and absorption,K04945,potassium intermediate/small conductance calcium-activated channel subfamily N member 4
+ko04974,Protein digestion and absorption,K04916,potassium channel subfamily K member 5
+ko04974,Protein digestion and absorption,K04897,potassium voltage-gated channel Isk-related subfamily E member 3
+ko04974,Protein digestion and absorption,K04926,potassium voltage-gated channel KQT-like subfamily member 1
+ko04974,Protein digestion and absorption,K05006,potassium inwardly-rectifying channel subfamily J member 13
+ko04974,Protein digestion and absorption,K14207,solute carrier family 38 (sodium-coupled neutral amino acid transporter); member 2
+ko04974,Protein digestion and absorption,K01389,neprilysin [EC:3.4.24.11]
+ko04974,Protein digestion and absorption,K01395,meprin A [EC:3.4.24.18]
+ko04974,Protein digestion and absorption,K08606,meprin B [EC:3.4.24.63]
+ko04974,Protein digestion and absorption,K09708,angiotensin-converting enzyme 2 [EC:3.4.17.23]
+ko04974,Protein digestion and absorption,K01285,lysosomal Pro-X carboxypeptidase [EC:3.4.16.2]
+ko04974,Protein digestion and absorption,K01278,dipeptidyl-peptidase 4 [EC:3.4.14.5]
+ko04974,Protein digestion and absorption,K14208,Xaa-Pro aminopeptidase 2 [EC:3.4.11.9]
+ko04974,Protein digestion and absorption,K05612,solute carrier family 1 (neuronal/epithelial high affinity glutamate transporter); member 1
+ko04974,Protein digestion and absorption,K05616,solute carrier family 1 (neutral amino acid transporter); member 5
+ko04974,Protein digestion and absorption,K05849,solute carrier family 8 (sodium/calcium exchanger)
+ko04974,Protein digestion and absorption,K05334,solute carrier family 6 (neurotransmitter transporter) member 19
+ko04974,Protein digestion and absorption,K06519,solute carrier family 3; member 2
+ko04974,Protein digestion and absorption,K13781,solute carrier family 7 (L-type amino acid transporter); member 8
+ko04974,Protein digestion and absorption,K14209,solute carrier family 36 (proton-coupled amino acid transporter)
+ko04974,Protein digestion and absorption,K08187,MFS transporter; MCT family; solute carrier family 16 (monocarboxylic acid transporters); member 10
+ko04974,Protein digestion and absorption,K14210,solute carrier family 3 (neutral and basic amino acid transporter); member 1
+ko04974,Protein digestion and absorption,K13868,solute carrier family 7 (L-type amino acid transporter); member 9/15
+ko04974,Protein digestion and absorption,K13867,solute carrier family 7 (L-type amino acid transporter); member 7
+ko04974,Protein digestion and absorption,K14211,elastin
+ko04974,Protein digestion and absorption,K06236,collagen type I alpha
+ko04974,Protein digestion and absorption,K19719,collagen type II alpha
+ko04974,Protein digestion and absorption,K19720,collagen type III alpha
+ko04974,Protein digestion and absorption,K06237,collagen type IV alpha
+ko04974,Protein digestion and absorption,K19721,collagen type V/XI/XXIV/XXVII; alpha
+ko04974,Protein digestion and absorption,K06238,collagen type VI alpha
+ko04974,Protein digestion and absorption,K16628,collagen type VII alpha
+ko04974,Protein digestion and absorption,K23455,collagen type VIII alpha
+ko04974,Protein digestion and absorption,K08131,collagen type IX alpha
+ko04974,Protein digestion and absorption,K19479,collagen type X alpha
+ko04974,Protein digestion and absorption,K08132,collagen type XII alpha
+ko04974,Protein digestion and absorption,K16617,collagen type XIII alpha
+ko04974,Protein digestion and absorption,K08133,collagen type XIV alpha
+ko04974,Protein digestion and absorption,K08135,collagen type XV alpha
+ko04974,Protein digestion and absorption,K24339,collagen type XVI alpha
+ko04974,Protein digestion and absorption,K07603,collagen type XVII alpha
+ko04974,Protein digestion and absorption,K06823,collagen type XVIII alpha
+ko04974,Protein digestion and absorption,K24340,collagen type XIX alpha
+ko04974,Protein digestion and absorption,K24357,collagen type XX alpha
+ko04974,Protein digestion and absorption,K16629,collagen type XXI alpha
+ko04974,Protein digestion and absorption,K16630,collagen type XXII alpha
+ko04974,Protein digestion and absorption,K24355,collagen type XXIII alpha
+ko04974,Protein digestion and absorption,K24356,collagen type XXV alpha
+ko04974,Protein digestion and absorption,K24358,collagen type XXVI alpha (EMI domain-containing protein 2)
+ko04974,Protein digestion and absorption,K23619,collagen type XXVIII alpha
+ko04971,Gastric acid secretion,K04131,muscarinic acetylcholine receptor M3
+ko04971,Gastric acid secretion,K13768,gastrin
+ko04971,Gastric acid secretion,K04195,cholecystokinin B receptor
+ko04971,Gastric acid secretion,K04634,guanine nucleotide-binding protein G(q) subunit alpha
+ko04971,Gastric acid secretion,K05858,phosphatidylinositol phospholipase C; beta [EC:3.1.4.11]
+ko04971,Gastric acid secretion,K02677,classical protein kinase C alpha type [EC:2.7.11.13]
+ko04971,Gastric acid secretion,K19662,classical protein kinase C beta type [EC:2.7.11.13]
+ko04971,Gastric acid secretion,K19663,classical protein kinase C gamma type [EC:2.7.11.13]
+ko04971,Gastric acid secretion,K08007,ezrin
+ko04971,Gastric acid secretion,K05692,actin beta/gamma 1
+ko04971,Gastric acid secretion,K04958,inositol 1;4;5-triphosphate receptor type 1
+ko04971,Gastric acid secretion,K04959,inositol 1;4;5-triphosphate receptor type 2
+ko04971,Gastric acid secretion,K04960,inositol 1;4;5-triphosphate receptor type 3
+ko04971,Gastric acid secretion,K02183,calmodulin
+ko04971,Gastric acid secretion,K04515,calcium/calmodulin-dependent protein kinase (CaM kinase) II [EC:2.7.11.17]
+ko04971,Gastric acid secretion,K00907,myosin-light-chain kinase [EC:2.7.11.18]
+ko04971,Gastric acid secretion,K04150,histamine receptor H2
+ko04971,Gastric acid secretion,K04632,guanine nucleotide-binding protein G(s) subunit alpha
+ko04971,Gastric acid secretion,K08041,adenylate cyclase 1 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08042,adenylate cyclase 2 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08043,adenylate cyclase 3 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08044,adenylate cyclase 4 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08045,adenylate cyclase 5 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08046,adenylate cyclase 6 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08047,adenylate cyclase 7 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08048,adenylate cyclase 8 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K08049,adenylate cyclase 9 [EC:4.6.1.1]
+ko04971,Gastric acid secretion,K05237,somatostatin
+ko04971,Gastric acid secretion,K04218,somatostatin receptor 2
+ko04971,Gastric acid secretion,K04630,guanine nucleotide-binding protein G(i) subunit alpha
+ko04971,Gastric acid secretion,K04345,protein kinase A [EC:2.7.11.11]
+ko04971,Gastric acid secretion,K01542,H+/K+-exchanging ATPase subunit alpha [EC:7.2.2.19]
+ko04971,Gastric acid secretion,K01543,H+/K+-exchanging ATPase subunit beta [EC:7.2.2.19]
+ko04971,Gastric acid secretion,K04896,potassium voltage-gated channel Isk-related subfamily E member 2
+ko04971,Gastric acid secretion,K04926,potassium voltage-gated channel KQT-like subfamily member 1
+ko04971,Gastric acid secretion,K04995,potassium inwardly-rectifying channel subfamily J member 1
+ko04971,Gastric acid secretion,K04996,potassium inwardly-rectifying channel subfamily J member 2
+ko04971,Gastric acid secretion,K05003,potassium inwardly-rectifying channel subfamily J member 10
+ko04971,Gastric acid secretion,K05008,potassium inwardly-rectifying channel subfamily J member 15
+ko04971,Gastric acid secretion,K05009,potassium inwardly-rectifying channel subfamily J member 16
+ko04971,Gastric acid secretion,K05031,cystic fibrosis transmembrane conductance regulator [EC:5.6.1.6]
+ko04971,Gastric acid secretion,K04913,potassium channel subfamily K member 2
+ko04971,Gastric acid secretion,K04920,potassium channel subfamily K member 10
+ko04971,Gastric acid secretion,K01539,sodium/potassium-transporting ATPase subunit alpha [EC:7.2.2.13]
+ko04971,Gastric acid secretion,K01540,sodium/potassium-transporting ATPase subunit beta
+ko04971,Gastric acid secretion,K05742,solute carrier family 9 (sodium/hydrogen exchanger); member 1
+ko04971,Gastric acid secretion,K13961,solute carrier family 9 (sodium/hydrogen exchanger); member 4
+ko04971,Gastric acid secretion,K18245,carbonic anhydrase 2 [EC:4.2.1.1]
+ko04971,Gastric acid secretion,K13962,solute carrier family 26 (anion exchange transporter); member 7
+ko04971,Gastric acid secretion,K13855,solute carrier family 4 (anion exchanger); member 2
+ko04972,Pancreatic secretion,K04131,muscarinic acetylcholine receptor M3
+ko04972,Pancreatic secretion,K05226,cholecystokinin
+ko04972,Pancreatic secretion,K04194,cholecystokinin A receptor
+ko04972,Pancreatic secretion,K04634,guanine nucleotide-binding protein G(q) subunit alpha
+ko04972,Pancreatic secretion,K05858,phosphatidylinositol phospholipase C; beta [EC:3.1.4.11]
+ko04972,Pancreatic secretion,K02677,classical protein kinase C alpha type [EC:2.7.11.13]
+ko04972,Pancreatic secretion,K19662,classical protein kinase C beta type [EC:2.7.11.13]
+ko04972,Pancreatic secretion,K19663,classical protein kinase C gamma type [EC:2.7.11.13]
+ko04972,Pancreatic secretion,K07884,Ras-related protein Rab-3D
+ko04972,Pancreatic secretion,K07901,Ras-related protein Rab-8A
+ko04972,Pancreatic secretion,K07904,Ras-related protein Rab-11A
+ko04972,Pancreatic secretion,K07886,Ras-related protein Rab-27B
+ko04972,Pancreatic secretion,K04353,Ras-related protein Rap-1A
+ko04972,Pancreatic secretion,K07836,Ras-related protein Rap-1B
+ko04972,Pancreatic secretion,K04513,Ras homolog gene family; member A
+ko04972,Pancreatic secretion,K04392,Ras-related C3 botulinum toxin substrate 1
+ko04972,Pancreatic secretion,K01176,alpha-amylase [EC:3.2.1.1]
+ko04972,Pancreatic secretion,K01312,trypsin [EC:3.4.21.4]
+ko04972,Pancreatic secretion,K01310,chymotrypsin [EC:3.4.21.1]
+ko04972,Pancreatic secretion,K09632,chymotrypsin-like protease [EC:3.4.21.-]
+ko04972,Pancreatic secretion,K01346,pancreatic elastase II [EC:3.4.21.71]
+ko04972,Pancreatic secretion,K01345,pancreatic endopeptidase E [EC:3.4.21.70]
+ko04972,Pancreatic secretion,K08779,carboxypeptidase A1 [EC:3.4.17.1]
+ko04972,Pancreatic secretion,K01298,carboxypeptidase A2 [EC:3.4.17.15]
+ko04972,Pancreatic secretion,K08780,carboxypeptidase A3 [EC:3.4.17.1]
+ko04972,Pancreatic secretion,K01291,carboxypeptidase B [EC:3.4.17.2]
+ko04972,Pancreatic secretion,K01300,carboxypeptidase B2 [EC:3.4.17.20]
+ko04972,Pancreatic secretion,K14073,pancreatic triacylglycerol lipase [EC:3.1.1.3]
+ko04972,Pancreatic secretion,K14074,pancreatic lipase-related protein 1 [EC:3.1.1.3]
+ko04972,Pancreatic secretion,K14075,pancreatic lipase-related protein 2 [EC:3.1.1.3]
+ko04972,Pancreatic secretion,K12298,bile salt-stimulated lipase [EC:3.1.1.13 3.1.1.3]
+ko04972,Pancreatic secretion,K01047,secretory phospholipase A2 [EC:3.1.1.4]
+ko04972,Pancreatic secretion,K04958,inositol 1;4;5-triphosphate receptor type 1
+ko04972,Pancreatic secretion,K04959,inositol 1;4;5-triphosphate receptor type 2
+ko04972,Pancreatic secretion,K04960,inositol 1;4;5-triphosphate receptor type 3
+ko04972,Pancreatic secretion,K04962,ryanodine receptor 2
+ko04972,Pancreatic secretion,K01242,ADP-ribosyl cyclase 1 [EC:3.2.2.6 2.4.99.20]
+ko04972,Pancreatic secretion,K18152,ADP-ribosyl cyclase 2 [EC:3.2.2.6 2.4.99.20]
+ko04972,Pancreatic secretion,K14077,two pore calcium channel protein 2
+ko04972,Pancreatic secretion,K05853,P-type Ca2+ transporter type 2A [EC:7.2.2.10]
+ko04972,Pancreatic secretion,K05027,calcium-activated chloride channel regulator 1
+ko04972,Pancreatic secretion,K05028,calcium-activated chloride channel regulator 2
+ko04972,Pancreatic secretion,K05030,calcium-activated chloride channel regulator 3/4
+ko04972,Pancreatic secretion,K04964,transient receptor potential cation channel subfamily C member 1
+ko04972,Pancreatic secretion,K10951,solute carrier family 12 (sodium/potassium/chloride transporter); member 2
+ko04972,Pancreatic secretion,K01539,sodium/potassium-transporting ATPase subunit alpha [EC:7.2.2.13]
+ko04972,Pancreatic secretion,K01540,sodium/potassium-transporting ATPase subunit beta
+ko04972,Pancreatic secretion,K01538,sodium/potassium-transporting ATPase subunit gamma (FXYD domain-containing ion transport regulator 2)
+ko04972,Pancreatic secretion,K04926,potassium voltage-gated channel KQT-like subfamily member 1
+ko04972,Pancreatic secretion,K04936,potassium large conductance calcium-activated channel subfamily M alpha member 1
+ko04972,Pancreatic secretion,K05850,P-type Ca2+ transporter type 2B [EC:7.2.2.10]
+ko04972,Pancreatic secretion,K05742,solute carrier family 9 (sodium/hydrogen exchanger); member 1
+ko04972,Pancreatic secretion,K13855,solute carrier family 4 (anion exchanger); member 2
+ko04972,Pancreatic secretion,K05263,secretin
+ko04972,Pancreatic secretion,K04588,secretin receptor
+ko04972,Pancreatic secretion,K04632,guanine nucleotide-binding protein G(s) subunit alpha
+ko04972,Pancreatic secretion,K08041,adenylate cyclase 1 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08042,adenylate cyclase 2 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08043,adenylate cyclase 3 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08044,adenylate cyclase 4 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08045,adenylate cyclase 5 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08046,adenylate cyclase 6 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08047,adenylate cyclase 7 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08048,adenylate cyclase 8 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K08049,adenylate cyclase 9 [EC:4.6.1.1]
+ko04972,Pancreatic secretion,K05031,cystic fibrosis transmembrane conductance regulator [EC:5.6.1.6]
+ko04972,Pancreatic secretion,K14078,solute carrier family 26 (chloride anion exchanger); member 3
+ko04972,Pancreatic secretion,K13575,solute carrier family 4 (sodium bicarbonate cotransporter); member 4
+ko04972,Pancreatic secretion,K18245,carbonic anhydrase 2 [EC:4.2.1.1]
+ko00280 ,Valine; leucine and isoleucine degradation,K00826,branched-chain amino acid aminotransferase [EC:2.6.1.42]
+ko00280 ,Valine; leucine and isoleucine degradation,K03334,L-amino-acid oxidase [EC:1.4.3.2]
+ko00280 ,Valine; leucine and isoleucine degradation,K00271,valine dehydrogenase (NAD+) [EC:1.4.1.23]
+ko00280 ,Valine; leucine and isoleucine degradation,K00263,leucine dehydrogenase [EC:1.4.1.9]
+ko00280 ,Valine; leucine and isoleucine degradation,K00166,2-oxoisovalerate dehydrogenase E1 component subunit alpha [EC:1.2.4.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K00167,2-oxoisovalerate dehydrogenase E1 component subunit beta [EC:1.2.4.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K11381,2-oxoisovalerate dehydrogenase E1 component [EC:1.2.4.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K09699,2-oxoisovalerate dehydrogenase E2 component (dihydrolipoyl transacylase) [EC:2.3.1.168]
+ko00280 ,Valine; leucine and isoleucine degradation,K00382,dihydrolipoyl dehydrogenase [EC:1.8.1.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K00186,2-oxoisovalerate ferredoxin oxidoreductase alpha subunit [EC:1.2.7.7]
+ko00280 ,Valine; leucine and isoleucine degradation,K00187,2-oxoisovalerate ferredoxin oxidoreductase beta subunit [EC:1.2.7.7]
+ko00280 ,Valine; leucine and isoleucine degradation,K00189,2-oxoisovalerate/pyruvate ferredoxin oxidoreductase gamma subunit [EC:1.2.7.7 1.2.7.1]
+ko00280 ,Valine; leucine and isoleucine degradation,K00188,2-oxoisovalerate ferredoxin oxidoreductase delta subunit [EC:1.2.7.7]
+ko00280 ,Valine; leucine and isoleucine degradation,K00248,butyryl-CoA dehydrogenase [EC:1.3.8.1]
+ko00280 ,Valine; leucine and isoleucine degradation,K00249,acyl-CoA dehydrogenase [EC:1.3.8.7]
+ko00280 ,Valine; leucine and isoleucine degradation,K00253,isovaleryl-CoA dehydrogenase [EC:1.3.8.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K11410,short-chain 2-methylacyl-CoA dehydrogenase [EC:1.3.8.5]
+ko00280 ,Valine; leucine and isoleucine degradation,K09478,short-chain 2-methylacyl-CoA dehydrogenase [EC:1.3.8.5]
+ko00280 ,Valine; leucine and isoleucine degradation,K11538,isobutyryl-CoA dehydrogenase [EC:1.3.99.-]
+ko00280 ,Valine; leucine and isoleucine degradation,K01692,enoyl-CoA hydratase [EC:4.2.1.17]
+ko00280 ,Valine; leucine and isoleucine degradation,K01825,3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase / enoyl-CoA isomerase [EC:1.1.1.35 4.2.1.17 5.1.2.3 5.3.3.8]
+ko00280 ,Valine; leucine and isoleucine degradation,K01782,3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase [EC:1.1.1.35 4.2.1.17 5.1.2.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K07515,enoyl-CoA hydratase / long-chain 3-hydroxyacyl-CoA dehydrogenase [EC:4.2.1.17 1.1.1.211]
+ko00280 ,Valine; leucine and isoleucine degradation,K07514,enoyl-CoA hydratase / 3-hydroxyacyl-CoA dehydrogenase / 3;2-trans-enoyl-CoA isomerase [EC:4.2.1.17 1.1.1.35 5.3.3.8]
+ko00280 ,Valine; leucine and isoleucine degradation,K07511,enoyl-CoA hydratase [EC:4.2.1.17]
+ko00280 ,Valine; leucine and isoleucine degradation,K00022,3-hydroxyacyl-CoA dehydrogenase [EC:1.1.1.35]
+ko00280 ,Valine; leucine and isoleucine degradation,K08683,3-hydroxyacyl-CoA dehydrogenase / 3-hydroxy-2-methylbutyryl-CoA dehydrogenase [EC:1.1.1.35 1.1.1.178]
+ko00280 ,Valine; leucine and isoleucine degradation,K00632,acetyl-CoA acyltransferase [EC:2.3.1.16]
+ko00280 ,Valine; leucine and isoleucine degradation,K07513,acetyl-CoA acyltransferase 1 [EC:2.3.1.16]
+ko00280 ,Valine; leucine and isoleucine degradation,K07508,acetyl-CoA acyltransferase 2 [EC:2.3.1.16]
+ko00280 ,Valine; leucine and isoleucine degradation,K07509,acetyl-CoA acyltransferase [EC:2.3.1.16]
+ko00280 ,Valine; leucine and isoleucine degradation,K01965,propionyl-CoA carboxylase alpha chain [EC:6.4.1.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K01966,propionyl-CoA carboxylase beta chain [EC:6.4.1.3 2.1.3.15]
+ko00280 ,Valine; leucine and isoleucine degradation,K11263,acetyl-CoA/propionyl-CoA carboxylase; biotin carboxylase; biotin carboxyl carrier protein [EC:6.4.1.2 6.4.1.3 6.3.4.14]
+ko00280 ,Valine; leucine and isoleucine degradation,K18472,acetyl-CoA/propionyl-CoA carboxylase carboxyl transferase subunit [EC:6.4.1.2 6.4.1.3 2.1.3.15]
+ko00280 ,Valine; leucine and isoleucine degradation,K19312,acetyl-CoA/propionyl-CoA carboxylase carboxyl transferase subunit [EC:6.4.1.2 6.4.1.3 2.1.3.15]
+ko00280 ,Valine; leucine and isoleucine degradation,K22568,acetyl-CoA/propionyl-CoA carboxylase; PccX subunit [EC:6.4.1.2 6.4.1.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K01964,acetyl-CoA/propionyl-CoA carboxylase [EC:6.4.1.2 6.4.1.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K15036,acetyl-CoA/propionyl-CoA carboxylase [EC:6.4.1.2 6.4.1.3 2.1.3.15]
+ko00280 ,Valine; leucine and isoleucine degradation,K15037,biotin carboxyl carrier protein
+ko00280 ,Valine; leucine and isoleucine degradation,K05606,methylmalonyl-CoA/ethylmalonyl-CoA epimerase [EC:5.1.99.1]
+ko00280 ,Valine; leucine and isoleucine degradation,K01847,methylmalonyl-CoA mutase [EC:5.4.99.2]
+ko00280 ,Valine; leucine and isoleucine degradation,K01849,methylmalonyl-CoA mutase; C-terminal domain [EC:5.4.99.2]
+ko00280 ,Valine; leucine and isoleucine degradation,K01848,methylmalonyl-CoA mutase; N-terminal domain [EC:5.4.99.2]
+ko00280 ,Valine; leucine and isoleucine degradation,K05605,3-hydroxyisobutyryl-CoA hydrolase [EC:3.1.2.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K00020,3-hydroxyisobutyrate dehydrogenase [EC:1.1.1.31]
+ko00280 ,Valine; leucine and isoleucine degradation,K23146,3-hydroxyisobutyrate/3-hydroxypropionate dehydrogenase [EC:1.1.1.31 1.1.1.59]
+ko00280 ,Valine; leucine and isoleucine degradation,K00140,malonate-semialdehyde dehydrogenase (acetylating) / methylmalonate-semialdehyde dehydrogenase [EC:1.2.1.18 1.2.1.27]
+ko00280 ,Valine; leucine and isoleucine degradation,K00128,aldehyde dehydrogenase (NAD+) [EC:1.2.1.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K14085,aldehyde dehydrogenase family 7 member A1 [EC:1.2.1.31 1.2.1.8 1.2.1.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K00149,aldehyde dehydrogenase family 9 member A1 [EC:1.2.1.47 1.2.1.3]
+ko00280 ,Valine; leucine and isoleucine degradation,K00157,aldehyde oxidase [EC:1.2.3.1]
+ko00280 ,Valine; leucine and isoleucine degradation,K18660,malonyl-CoA/methylmalonyl-CoA synthetase [EC:6.2.1.76 6.2.1.-]
+ko00280 ,Valine; leucine and isoleucine degradation,K18661,malonyl-CoA/methylmalonyl-CoA synthetase [EC:6.2.1.76 6.2.1.-]
+ko00280 ,Valine; leucine and isoleucine degradation,K00822,beta-alanine--pyruvate transaminase [EC:2.6.1.18]
+ko00280 ,Valine; leucine and isoleucine degradation,K07250,4-aminobutyrate aminotransferase / (S)-3-amino-2-methylpropionate transaminase / 5-aminovalerate transaminase [EC:2.6.1.19 2.6.1.22 2.6.1.48]
+ko00280 ,Valine; leucine and isoleucine degradation,K13524,4-aminobutyrate aminotransferase / (S)-3-amino-2-methylpropionate transaminase [EC:2.6.1.19 2.6.1.22]
+ko00280 ,Valine; leucine and isoleucine degradation,K00827,alanine-glyoxylate transaminase / (R)-3-amino-2-methylpropionate-pyruvate transaminase [EC:2.6.1.44 2.6.1.40]
+ko00280 ,Valine; leucine and isoleucine degradation,K01968,3-methylcrotonyl-CoA carboxylase alpha subunit [EC:6.4.1.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K01969,3-methylcrotonyl-CoA carboxylase beta subunit [EC:6.4.1.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K05607,methylglutaconyl-CoA hydratase [EC:4.2.1.18]
+ko00280 ,Valine; leucine and isoleucine degradation,K13766,methylglutaconyl-CoA hydratase [EC:4.2.1.18]
+ko00280 ,Valine; leucine and isoleucine degradation,K01640,hydroxymethylglutaryl-CoA lyase [EC:4.1.3.4]
+ko00280 ,Valine; leucine and isoleucine degradation,K01027,3-oxoacid CoA-transferase [EC:2.8.3.5]
+ko00280 ,Valine; leucine and isoleucine degradation,K01028,3-oxoacid CoA-transferase subunit A [EC:2.8.3.5]
+ko00280 ,Valine; leucine and isoleucine degradation,K01029,3-oxoacid CoA-transferase subunit B [EC:2.8.3.5]
+ko00280 ,Valine; leucine and isoleucine degradation,K01907,acetoacetyl-CoA synthetase [EC:6.2.1.16]
+ko00280 ,Valine; leucine and isoleucine degradation,K00626,acetyl-CoA C-acetyltransferase [EC:2.3.1.9]
+ko00280 ,Valine; leucine and isoleucine degradation,K01641,hydroxymethylglutaryl-CoA synthase [EC:2.3.3.10]
+ko00350,Tyrosine metabolism,K14454,aspartate aminotransferase; cytoplasmic [EC:2.6.1.1]
+ko00350,Tyrosine metabolism,K14455,aspartate aminotransferase; mitochondrial [EC:2.6.1.1]
+ko00350,Tyrosine metabolism,K00811,aspartate aminotransferase; chloroplastic [EC:2.6.1.1]
+ko00350,Tyrosine metabolism,K00812,aspartate aminotransferase [EC:2.6.1.1]
+ko00350,Tyrosine metabolism,K00813,aspartate aminotransferase [EC:2.6.1.1]
+ko00350,Tyrosine metabolism,K11358,aspartate aminotransferase [EC:2.6.1.1]
+ko00350,Tyrosine metabolism,K15849,bifunctional aspartate aminotransferase and glutamate/aspartate-prephenate aminotransferase [EC:2.6.1.1 2.6.1.78 2.6.1.79]
+ko00350,Tyrosine metabolism,K00815,tyrosine aminotransferase [EC:2.6.1.5]
+ko00350,Tyrosine metabolism,K00817,histidinol-phosphate aminotransferase [EC:2.6.1.9]
+ko00350,Tyrosine metabolism,K00832,aromatic-amino-acid transaminase [EC:2.6.1.57]
+ko00350,Tyrosine metabolism,K00838,aromatic amino acid aminotransferase I / 2-aminoadipate transaminase [EC:2.6.1.57 2.6.1.39 2.6.1.27 2.6.1.5]
+ko00350,Tyrosine metabolism,K05821,aromatic amino acid aminotransferase II [EC:2.6.1.58 2.6.1.28]
+ko00350,Tyrosine metabolism,K00270,phenylalanine dehydrogenase [EC:1.4.1.20]
+ko00350,Tyrosine metabolism,K03334,L-amino-acid oxidase [EC:1.4.3.2]
+ko00350,Tyrosine metabolism,K00457,4-hydroxyphenylpyruvate dioxygenase [EC:1.13.11.27]
+ko00350,Tyrosine metabolism,K00451,homogentisate 1;2-dioxygenase [EC:1.13.11.5]
+ko00350,Tyrosine metabolism,K01800,maleylacetoacetate isomerase [EC:5.2.1.2]
+ko00350,Tyrosine metabolism,K01555,fumarylacetoacetase [EC:3.7.1.2]
+ko00350,Tyrosine metabolism,K16171,fumarylacetoacetate (FAA) hydrolase [EC:3.7.1.2]
+ko00350,Tyrosine metabolism,K00422,polyphenol oxidase [EC:1.10.3.1]
+ko00350,Tyrosine metabolism,K00505,tyrosinase [EC:1.14.18.1]
+ko00350,Tyrosine metabolism,K00501,tyrosine 3-monooxygenase [EC:1.14.16.2]
+ko00350,Tyrosine metabolism,K24287,L-tyrosine peroxygenase [EC:1.11.2.6]
+ko00350,Tyrosine metabolism,K01827,dopachrome tautomerase [EC:5.3.3.12]
+ko00350,Tyrosine metabolism,K22203,dopachrome tautomerase [EC:5.3.3.12]
+ko00350,Tyrosine metabolism,K00506,tyrosinase-related protein 1 [EC:1.14.18.-]
+ko00350,Tyrosine metabolism,K22329,tyrosine decarboxylase [EC:4.1.1.25]
+ko00350,Tyrosine metabolism,K01592,tyrosine decarboxylase [EC:4.1.1.25]
+ko00350,Tyrosine metabolism,K22330,tyrosine decarboxylase [EC:4.1.1.25]
+ko00350,Tyrosine metabolism,K18933,tyrosine decarboxylase / aspartate 1-decarboxylase [EC:4.1.1.25 4.1.1.11]
+ko00350,Tyrosine metabolism,K01593,aromatic-L-amino-acid/L-tryptophan decarboxylase [EC:4.1.1.28 4.1.1.105]
+ko00350,Tyrosine metabolism,K00503,dopamine beta-monooxygenase [EC:1.14.17.1]
+ko00350,Tyrosine metabolism,K00553,phenylethanolamine N-methyltransferase [EC:2.1.1.28]
+ko00350,Tyrosine metabolism,K00545,catechol O-methyltransferase [EC:2.1.1.6]
+ko00350,Tyrosine metabolism,K00274,monoamine oxidase [EC:1.4.3.4]
+ko00350,Tyrosine metabolism,K00276,primary-amine oxidase [EC:1.4.3.21]
+ko00350,Tyrosine metabolism,K13371,aralkylamine dehydrogenase light chain [EC:1.4.9.2]
+ko00350,Tyrosine metabolism,K13372,aralkylamine dehydrogenase heavy chain [EC:1.4.9.2]
+ko00350,Tyrosine metabolism,K25271,tyramine oxidase subunit A [EC:1.4.3.-]
+ko00350,Tyrosine metabolism,K25272,tyramine oxidase subunit B [EC:1.4.3.-]
+ko00350,Tyrosine metabolism,K01618,3;4-dihydroxyphenylacetaldehyde synthase [EC:4.1.1.107]
+ko00350,Tyrosine metabolism,K00129,aldehyde dehydrogenase (NAD(P)+) [EC:1.2.1.5]
+ko00350,Tyrosine metabolism,K00146,phenylacetaldehyde dehydrogenase [EC:1.2.1.39]
+ko00350,Tyrosine metabolism,K13951,alcohol dehydrogenase 1/7 [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K13980,alcohol dehydrogenase 4 [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K00121,S-(hydroxymethyl)glutathione dehydrogenase / alcohol dehydrogenase [EC:1.1.1.284 1.1.1.1]
+ko00350,Tyrosine metabolism,K13952,alcohol dehydrogenase 6 [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K04072,acetaldehyde dehydrogenase / alcohol dehydrogenase [EC:1.2.1.10 1.1.1.1]
+ko00350,Tyrosine metabolism,K13953,alcohol dehydrogenase; propanol-preferring [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K13954,alcohol dehydrogenase [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K18857,alcohol dehydrogenase class-P [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K00001,alcohol dehydrogenase [EC:1.1.1.1]
+ko00350,Tyrosine metabolism,K22327,4-hydroxyphenylacetaldehyde synthase [EC:4.1.1.108]
+ko00350,Tyrosine metabolism,K00483,4-hydroxyphenylacetate 3-monooxygenase [EC:1.14.14.9]
+ko00350,Tyrosine metabolism,K23492,4-hydroxyphenylacetate 3-monooxygenase [EC:1.14.14.9]
+ko00350,Tyrosine metabolism,K16901,anthranilate 3-monooxygenase (FAD) / 4-hydroxyphenylacetate 3-monooxygenase [EC:1.14.14.8 1.14.14.9]
+ko00350,Tyrosine metabolism,K00484,flavin reductase (NADH) [EC:1.5.1.36]
+ko00350,Tyrosine metabolism,K23470,4-hydroxyphenylacetate 3-hydroxylase; reductase component [EC:1.5.1.36]
+ko00350,Tyrosine metabolism,K16902,FAD reductase [NAD(P)H] [EC:1.5.1.45]
+ko00350,Tyrosine metabolism,K00455,3;4-dihydroxyphenylacetate 2;3-dioxygenase [EC:1.13.11.15]
+ko00350,Tyrosine metabolism,K00151,5-carboxymethyl-2-hydroxymuconic-semialdehyde dehydrogenase [EC:1.2.1.60]
+ko00350,Tyrosine metabolism,K10219,2-hydroxy-4-carboxymuconate semialdehyde hemiacetal dehydrogenase [EC:1.1.1.312]
+ko00350,Tyrosine metabolism,K01826,5-carboxymethyl-2-hydroxymuconate isomerase [EC:5.3.3.10]
+ko00350,Tyrosine metabolism,K05921,5-oxopent-3-ene-1;2;5-tricarboxylate decarboxylase / 2-hydroxyhepta-2;4-diene-1;7-dioate isomerase [EC:4.1.1.68 5.3.3.-]
+ko00350,Tyrosine metabolism,K02509,2-oxo-hept-3-ene-1;7-dioate hydratase [EC:4.2.1.-]
+ko00350,Tyrosine metabolism,K02510,4-hydroxy-2-oxoheptanedioate aldolase [EC:4.1.2.52]
+ko00350,Tyrosine metabolism,K00135,succinate-semialdehyde dehydrogenase / glutarate-semialdehyde dehydrogenase [EC:1.2.1.16 1.2.1.79 1.2.1.20]
+ko00350,Tyrosine metabolism,K01668,tyrosine phenol-lyase [EC:4.1.99.2]
+ko00350,Tyrosine metabolism,K10774,tyrosine ammonia-lyase [EC:4.3.1.23]
+ko00350,Tyrosine metabolism,K00431,thyroid peroxidase [EC:1.11.1.8]
+ko00350,Tyrosine metabolism,K00055,aryl-alcohol dehydrogenase [EC:1.1.1.90]
+ko00350,Tyrosine metabolism,K00157,aldehyde oxidase [EC:1.2.3.1]
+ko00350,Tyrosine metabolism,K00450,gentisate 1;2-dioxygenase [EC:1.13.11.4]
+ko00350,Tyrosine metabolism,K01801,maleylpyruvate isomerase [EC:5.2.1.4]
+ko00350,Tyrosine metabolism,K16163,maleylpyruvate isomerase [EC:5.2.1.4]
+ko00350,Tyrosine metabolism,K01557,acylpyruvate hydrolase [EC:3.7.1.5]
+ko00350,Tyrosine metabolism,K16164,acylpyruvate hydrolase [EC:3.7.1.5]
+ko00350,Tyrosine metabolism,K16165,fumarylpyruvate hydrolase [EC:3.7.1.20]
+ko00350,Tyrosine metabolism,K20758,maleylpyruvate hydrolase [EC:3.7.1.23]
+ko00350,Tyrosine metabolism,K07253,phenylpyruvate tautomerase [EC:5.3.2.1]
+ko00350,Tyrosine metabolism,K23109,aromatic 2-oxoacid reductase [EC:1.1.1.110]
+ko00350,Tyrosine metabolism,K18606,hydroxyphenylpyruvate reductase [EC:1.1.1.237]
+ko00350,Tyrosine metabolism,K13574,hydroxycarboxylate dehydrogenase B [EC:1.1.1.237 1.1.1.-]
+ko00350,Tyrosine metabolism,K21425,rosmarinate synthase [EC:2.3.1.140]
+ko00380,Tryptophan metabolism,K00453,tryptophan 2;3-dioxygenase [EC:1.13.11.11]
+ko00380,Tryptophan metabolism,K00463,indoleamine 2;3-dioxygenase [EC:1.13.11.52]
+ko00380,Tryptophan metabolism,K01432,arylformamidase [EC:3.5.1.9]
+ko00380,Tryptophan metabolism,K14263,kynurenine formamidase [EC:3.5.1.9]
+ko00380,Tryptophan metabolism,K07130,arylformamidase [EC:3.5.1.9]
+ko00380,Tryptophan metabolism,K00486,kynurenine 3-monooxygenase [EC:1.14.13.9]
+ko00380,Tryptophan metabolism,K01556,kynureninase [EC:3.7.1.3]
+ko00380,Tryptophan metabolism,K16901,anthranilate 3-monooxygenase (FAD) / 4-hydroxyphenylacetate 3-monooxygenase [EC:1.14.14.8 1.14.14.9]
+ko00380,Tryptophan metabolism,K16902,FAD reductase [NAD(P)H] [EC:1.5.1.45]
+ko00380,Tryptophan metabolism,K00452,3-hydroxyanthranilate 3;4-dioxygenase [EC:1.13.11.6]
+ko00380,Tryptophan metabolism,K03392,aminocarboxymuconate-semialdehyde decarboxylase [EC:4.1.1.45]
+ko00380,Tryptophan metabolism,K23234,aminomuconate-semialdehyde dehydrogenase [EC:1.2.1.32]
+ko00380,Tryptophan metabolism,K10217,aminomuconate-semialdehyde/2-hydroxymuconate-6-semialdehyde dehydrogenase [EC:1.2.1.32 1.2.1.85]
+ko00380,Tryptophan metabolism,K15067,2-aminomuconate deaminase [EC:3.5.99.5]
+ko00380,Tryptophan metabolism,K15791,2-oxoadipate dehydrogenase E1 component [EC:1.2.4.-]
+ko00380,Tryptophan metabolism,K00658,2-oxoglutarate dehydrogenase E2 component (dihydrolipoamide succinyltransferase) [EC:2.3.1.61]
+ko00380,Tryptophan metabolism,K00382,dihydrolipoyl dehydrogenase [EC:1.8.1.4]
+ko00380,Tryptophan metabolism,K00252,glutaryl-CoA dehydrogenase [EC:1.3.8.6]
+ko00380,Tryptophan metabolism,K01692,enoyl-CoA hydratase [EC:4.2.1.17]
+ko00380,Tryptophan metabolism,K01825,3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase / enoyl-CoA isomerase [EC:1.1.1.35 4.2.1.17 5.1.2.3 5.3.3.8]
+ko00380,Tryptophan metabolism,K01782,3-hydroxyacyl-CoA dehydrogenase / enoyl-CoA hydratase / 3-hydroxybutyryl-CoA epimerase [EC:1.1.1.35 4.2.1.17 5.1.2.3]
+ko00380,Tryptophan metabolism,K07515,enoyl-CoA hydratase / long-chain 3-hydroxyacyl-CoA dehydrogenase [EC:4.2.1.17 1.1.1.211]
+ko00380,Tryptophan metabolism,K07514,enoyl-CoA hydratase / 3-hydroxyacyl-CoA dehydrogenase / 3;2-trans-enoyl-CoA isomerase [EC:4.2.1.17 1.1.1.35 5.3.3.8]
+ko00380,Tryptophan metabolism,K07511,enoyl-CoA hydratase [EC:4.2.1.17]
+ko00380,Tryptophan metabolism,K00022,3-hydroxyacyl-CoA dehydrogenase [EC:1.1.1.35]
+ko00380,Tryptophan metabolism,K00626,acetyl-CoA C-acetyltransferase [EC:2.3.1.9]
+ko00380,Tryptophan metabolism,K00816,kynurenine---oxoglutarate transaminase / cysteine-S-conjugate beta-lyase / glutamine---phenylpyruvate transaminase [EC:2.6.1.7 4.4.1.13 2.6.1.64]
+ko00380,Tryptophan metabolism,K00825,kynurenine/2-aminoadipate aminotransferase [EC:2.6.1.7 2.6.1.39]
+ko00380,Tryptophan metabolism,K14264,kynurenine aminotransferase [EC:2.6.1.7]
+ko00380,Tryptophan metabolism,K01667,tryptophanase [EC:4.1.99.1]
+ko00380,Tryptophan metabolism,K00502,tryptophan 5-monooxygenase [EC:1.14.16.4]
+ko00380,Tryptophan metabolism,K01593,aromatic-L-amino-acid/L-tryptophan decarboxylase [EC:4.1.1.28 4.1.1.105]
+ko00380,Tryptophan metabolism,K22433,L-tryptophan decarboxylase [EC:4.1.1.105]
+ko00380,Tryptophan metabolism,K24541,tryptamine 5-hydroxylase [EC:1.14.-.-]
+ko00380,Tryptophan metabolism,K00274,monoamine oxidase [EC:1.4.3.4]
+ko00380,Tryptophan metabolism,K00128,aldehyde dehydrogenase (NAD+) [EC:1.2.1.3]
+ko00380,Tryptophan metabolism,K14085,aldehyde dehydrogenase family 7 member A1 [EC:1.2.1.31 1.2.1.8 1.2.1.3]
+ko00380,Tryptophan metabolism,K00149,aldehyde dehydrogenase family 9 member A1 [EC:1.2.1.47 1.2.1.3]
+ko00380,Tryptophan metabolism,K00157,aldehyde oxidase [EC:1.2.3.1]
+ko00380,Tryptophan metabolism,K00543,acetylserotonin O-methyltransferase [EC:2.1.1.4]
+ko00380,Tryptophan metabolism,K00669,arylalkylamine N-acetyltransferase [EC:2.3.1.87]
+ko00380,Tryptophan metabolism,K22450,aralkylamine N-acetyltransferase [EC:2.3.1.87]
+ko00380,Tryptophan metabolism,K22588,acetylserotonin O-methyltransferase; plant [EC:2.1.1.4]
+ko00380,Tryptophan metabolism,K13066,caffeic acid 3-O-methyltransferase / acetylserotonin O-methyltransferase [EC:2.1.1.68 2.1.1.4]
+ko00380,Tryptophan metabolism,K07408,cytochrome P450 family 1 subfamily A1 [EC:1.14.14.1]
+ko00380,Tryptophan metabolism,K07409,cytochrome P450 family 1 subfamily A2 [EC:1.14.14.1]
+ko00380,Tryptophan metabolism,K07410,cytochrome P450 family 1 subfamily B1 [EC:1.14.14.1]
+ko00380,Tryptophan metabolism,K14338,cytochrome P450 / NADPH-cytochrome P450 reductase [EC:1.14.14.1 1.6.2.4]
+ko00380,Tryptophan metabolism,K00562,methyltransferase [EC:2.1.1.49 2.1.1.96]
+ko00380,Tryptophan metabolism,K11812,tryptophan N-monooxygenase [EC:1.14.14.156]
+ko00380,Tryptophan metabolism,K11813,tryptophan N-monooxygenase [EC:1.14.14.156]
+ko00380,Tryptophan metabolism,K11816,indole-3-pyruvate monooxygenase [EC:1.14.13.168]
+ko00380,Tryptophan metabolism,K03334,L-amino-acid oxidase [EC:1.4.3.2]
+ko00380,Tryptophan metabolism,K14265,tryptophan aminotransferase [EC:2.6.1.27]
+ko00380,Tryptophan metabolism,K00838,aromatic amino acid aminotransferase I / 2-aminoadipate transaminase [EC:2.6.1.57 2.6.1.39 2.6.1.27 2.6.1.5]
+ko00380,Tryptophan metabolism,K16903,L-tryptophan---pyruvate aminotransferase [EC:2.6.1.99]
+ko00380,Tryptophan metabolism,K00837,aromatic aminotransferase [EC:2.6.1.-]
+ko00380,Tryptophan metabolism,K23109,aromatic 2-oxoacid reductase [EC:1.1.1.110]
+ko00380,Tryptophan metabolism,K04103,indolepyruvate decarboxylase [EC:4.1.1.74]
+ko00380,Tryptophan metabolism,K11182,diamine oxidase [EC:1.4.3.22]
+ko00380,Tryptophan metabolism,K11868,indoleacetaldoxime dehydratase [EC:4.8.1.3]
+ko00380,Tryptophan metabolism,K11817,indole-3-acetaldehyde oxidase [EC:1.2.3.7]
+ko00380,Tryptophan metabolism,K22417,benzaldehyde dehydrogenase (NAD+) / indole-3-acetaldehyde oxidase [EC:1.2.1.28 1.2.3.7]
+ko00380,Tryptophan metabolism,K01501,nitrilase [EC:3.5.5.1]
+ko00380,Tryptophan metabolism,K01721,nitrile hydratase subunit alpha [EC:4.2.1.84]
+ko00380,Tryptophan metabolism,K20807,nitrile hydratase subunit beta [EC:4.2.1.84]
+ko00380,Tryptophan metabolism,K00466,tryptophan 2-monooxygenase [EC:1.13.12.3]
+ko00380,Tryptophan metabolism,K01426,amidase [EC:3.5.1.4]
+ko00380,Tryptophan metabolism,K21801,indoleacetamide hydrolase [EC:3.5.1.-]
+ko00380,Tryptophan metabolism,K11818,aromatic aldoxime N-monooxygenase [EC:1.14.14.45]
+ko00380,Tryptophan metabolism,K11819,S-alkyl-thiohydroximate lyase SUR1 [EC:4.4.1.-]
+ko00380,Tryptophan metabolism,K11820,N-hydroxythioamide S-beta-glucosyltransferase [EC:2.4.1.195]
+ko00380,Tryptophan metabolism,K11821,aromatic desulfoglucosinolate sulfotransferase [EC:2.8.2.24]
+ko00380,Tryptophan metabolism,K01237,myrosinase [EC:3.2.1.147]
+ko00380,Tryptophan metabolism,K03781,catalase [EC:1.11.1.6]
+ko00380,Tryptophan metabolism,K03782,catalase-peroxidase [EC:1.11.1.21]
+ko00380,Tryptophan metabolism,K20219,o-aminophenol oxidase [EC:1.10.3.4]
+ko00380,Tryptophan metabolism,K20204,grixazone synthase / o-aminophenol oxidase [EC:1.10.3.15 1.10.3.4]
+ko00380,Tryptophan metabolism,K23947,2-oxoglutarate-dependent dioxygenase [EC:1.14.11.-]
+ko00380,Tryptophan metabolism,K23384,indoleacetate decarboxylase [EC:4.1.1.115]
+ko00250,Alanine; aspartate and glutamate metabolism,K14454,aspartate aminotransferase; cytoplasmic [EC:2.6.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K14455,aspartate aminotransferase; mitochondrial [EC:2.6.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K00811,aspartate aminotransferase; chloroplastic [EC:2.6.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K00812,aspartate aminotransferase [EC:2.6.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K00813,aspartate aminotransferase [EC:2.6.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K11358,aspartate aminotransferase [EC:2.6.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K03334,L-amino-acid oxidase [EC:1.4.3.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K00278,L-aspartate oxidase [EC:1.4.3.16]
+ko00250,Alanine; aspartate and glutamate metabolism,K01779,aspartate racemase [EC:5.1.1.13]
+ko00250,Alanine; aspartate and glutamate metabolism,K00272,D-aspartate oxidase [EC:1.4.3.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K01424,L-asparaginase [EC:3.5.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K13051,L-asparaginase / beta-aspartyl-peptidase [EC:3.5.1.1 3.4.19.5]
+ko00250,Alanine; aspartate and glutamate metabolism,K05597,glutamin-(asparagin-)ase [EC:3.5.1.38]
+ko00250,Alanine; aspartate and glutamate metabolism,K01914,aspartate--ammonia ligase [EC:6.3.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K01953,asparagine synthase (glutamine-hydrolysing) [EC:6.3.5.4]
+ko00250,Alanine; aspartate and glutamate metabolism,K22457,asparagine---oxo-acid transaminase [EC:2.6.1.14]
+ko00250,Alanine; aspartate and glutamate metabolism,K13566,omega-amidase [EC:3.5.1.3]
+ko00250,Alanine; aspartate and glutamate metabolism,K09758,aspartate 4-decarboxylase [EC:4.1.1.12]
+ko00250,Alanine; aspartate and glutamate metabolism,K00814,alanine transaminase [EC:2.6.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K14260,alanine-synthesizing transaminase [EC:2.6.1.66 2.6.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K00830,alanine-glyoxylate transaminase / serine-glyoxylate transaminase / serine-pyruvate transaminase [EC:2.6.1.44 2.6.1.45 2.6.1.51]
+ko00250,Alanine; aspartate and glutamate metabolism,K00827,alanine-glyoxylate transaminase / (R)-3-amino-2-methylpropionate-pyruvate transaminase [EC:2.6.1.44 2.6.1.40]
+ko00250,Alanine; aspartate and glutamate metabolism,K14272,glutamate--glyoxylate aminotransferase [EC:2.6.1.4 2.6.1.2 2.6.1.44]
+ko00250,Alanine; aspartate and glutamate metabolism,K00259,alanine dehydrogenase [EC:1.4.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K19244,alanine dehydrogenase [EC:1.4.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K01744,aspartate ammonia-lyase [EC:4.3.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K01940,argininosuccinate synthase [EC:6.3.4.5]
+ko00250,Alanine; aspartate and glutamate metabolism,K01755,argininosuccinate lyase [EC:4.3.2.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K14681,argininosuccinate lyase / amino-acid N-acetyltransferase [EC:4.3.2.1 2.3.1.1]
+ko00250,Alanine; aspartate and glutamate metabolism,K01939,adenylosuccinate synthase [EC:6.3.4.4]
+ko00250,Alanine; aspartate and glutamate metabolism,K01756,adenylosuccinate lyase [EC:4.3.2.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K18309,aspartate N-acetyltransferase [EC:2.3.1.17]
+ko00250,Alanine; aspartate and glutamate metabolism,K18310,beta-citrylglutamate/N-acetylaspartylglutamate synthase [EC:6.3.1.17 6.3.2.41]
+ko00250,Alanine; aspartate and glutamate metabolism,K18311,N-acetylaspartylglutamate/N-acetylaspartylglutamylglutamate synthase [EC:6.3.2.41 6.3.2.42]
+ko00250,Alanine; aspartate and glutamate metabolism,K14592,glutamate carboxypeptidase II (folate hydrolase 1) [EC:3.4.17.21]
+ko00250,Alanine; aspartate and glutamate metabolism,K01437,aspartoacylase [EC:3.5.1.15]
+ko00250,Alanine; aspartate and glutamate metabolism,K00609,aspartate carbamoyltransferase catalytic subunit [EC:2.1.3.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K00610,aspartate carbamoyltransferase regulatory subunit
+ko00250,Alanine; aspartate and glutamate metabolism,K00608,aspartate carbamoyltransferase [EC:2.1.3.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K01580,glutamate decarboxylase [EC:4.1.1.15]
+ko00250,Alanine; aspartate and glutamate metabolism,K00823,4-aminobutyrate aminotransferase [EC:2.6.1.19]
+ko00250,Alanine; aspartate and glutamate metabolism,K14268,5-aminovalerate/4-aminobutyrate aminotransferase [EC:2.6.1.48 2.6.1.19]
+ko00250,Alanine; aspartate and glutamate metabolism,K07250,4-aminobutyrate aminotransferase / (S)-3-amino-2-methylpropionate transaminase / 5-aminovalerate transaminase [EC:2.6.1.19 2.6.1.22 2.6.1.48]
+ko00250,Alanine; aspartate and glutamate metabolism,K13524,4-aminobutyrate aminotransferase / (S)-3-amino-2-methylpropionate transaminase [EC:2.6.1.19 2.6.1.22]
+ko00250,Alanine; aspartate and glutamate metabolism,K16871,4-aminobutyrate---pyruvate transaminase [EC:2.6.1.96]
+ko00250,Alanine; aspartate and glutamate metabolism,K00135,succinate-semialdehyde dehydrogenase / glutarate-semialdehyde dehydrogenase [EC:1.2.1.16 1.2.1.79 1.2.1.20]
+ko00250,Alanine; aspartate and glutamate metabolism,K00139,succinate-semialdehyde dehydrogenase [EC:1.2.1.24]
+ko00250,Alanine; aspartate and glutamate metabolism,K17761,succinate-semialdehyde dehydrogenase; mitochondrial [EC:1.2.1.24]
+ko00250,Alanine; aspartate and glutamate metabolism,K08324,succinate-semialdehyde dehydrogenase [EC:1.2.1.16 1.2.1.24]
+ko00250,Alanine; aspartate and glutamate metabolism,K00264,glutamate synthase (NADH) [EC:1.4.1.14]
+ko00250,Alanine; aspartate and glutamate metabolism,K00265,glutamate synthase (NADPH) large chain [EC:1.4.1.13]
+ko00250,Alanine; aspartate and glutamate metabolism,K00266,glutamate synthase (NADPH) small chain [EC:1.4.1.13]
+ko00250,Alanine; aspartate and glutamate metabolism,K15371,glutamate dehydrogenase [EC:1.4.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K00260,glutamate dehydrogenase [EC:1.4.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K00261,glutamate dehydrogenase (NAD(P)+) [EC:1.4.1.3]
+ko00250,Alanine; aspartate and glutamate metabolism,K00262,glutamate dehydrogenase (NADP+) [EC:1.4.1.4]
+ko00250,Alanine; aspartate and glutamate metabolism,K00294,1-pyrroline-5-carboxylate dehydrogenase [EC:1.2.1.88]
+ko00250,Alanine; aspartate and glutamate metabolism,K13821,RHH-type transcriptional regulator; proline utilization regulon repressor / proline dehydrogenase / delta 1-pyrroline-5-carboxylate dehydrogenase [EC:1.5.5.2 1.2.1.88]
+ko00250,Alanine; aspartate and glutamate metabolism,K01915,glutamine synthetase [EC:6.3.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K11540,carbamoyl-phosphate synthase / aspartate carbamoyltransferase / dihydroorotase [EC:6.3.5.5 2.1.3.2 3.5.2.3]
+ko00250,Alanine; aspartate and glutamate metabolism,K11541,carbamoyl-phosphate synthase / aspartate carbamoyltransferase [EC:6.3.5.5 2.1.3.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K01954,carbamoyl-phosphate synthase [EC:6.3.5.5]
+ko00250,Alanine; aspartate and glutamate metabolism,K01955,carbamoyl-phosphate synthase large subunit [EC:6.3.5.5]
+ko00250,Alanine; aspartate and glutamate metabolism,K01956,carbamoyl-phosphate synthase small subunit [EC:6.3.5.5]
+ko00250,Alanine; aspartate and glutamate metabolism,K01425,glutaminase [EC:3.5.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K23265,phosphoribosylformylglycinamidine synthase subunit PurQ / glutaminase [EC:6.3.5.3 3.5.1.2]
+ko00250,Alanine; aspartate and glutamate metabolism,K01948,carbamoyl-phosphate synthase (ammonia) [EC:6.3.4.16]
+ko00250,Alanine; aspartate and glutamate metabolism,K08590,2-oxoglutaramate amidase [EC:3.5.1.111]
+ko00250,Alanine; aspartate and glutamate metabolism,K00820,glutamine---fructose-6-phosphate transaminase (isomerizing) [EC:2.6.1.16]
+ko00250,Alanine; aspartate and glutamate metabolism,K00764,amidophosphoribosyltransferase [EC:2.4.2.14]
+ko00910,Nitrogen metabolism,K01455,formamidase [EC:3.5.1.49]
+ko00910,Nitrogen metabolism,K02575,MFS transporter; NNP family; nitrate/nitrite transporter
+ko00910,Nitrogen metabolism,K15576,nitrate/nitrite transport system substrate-binding protein
+ko00910,Nitrogen metabolism,K15577,nitrate/nitrite transport system permease protein
+ko00910,Nitrogen metabolism,K15578,nitrate/nitrite transport system ATP-binding protein [EC:7.3.2.4]
+ko00910,Nitrogen metabolism,K15579,nitrate/nitrite transport system ATP-binding protein
+ko00910,Nitrogen metabolism,K00367,ferredoxin-nitrate reductase [EC:1.7.7.2]
+ko00910,Nitrogen metabolism,K10534,nitrate reductase (NAD(P)H) [EC:1.7.1.1 1.7.1.2 1.7.1.3]
+ko00910,Nitrogen metabolism,K00370,nitrate reductase / nitrite oxidoreductase; alpha subunit [EC:1.7.5.1 1.7.99.-]
+ko00910,Nitrogen metabolism,K00371,nitrate reductase / nitrite oxidoreductase; beta subunit [EC:1.7.5.1 1.7.99.-]
+ko00910,Nitrogen metabolism,K00374,nitrate reductase gamma subunit [EC:1.7.5.1 1.7.99.-]
+ko00910,Nitrogen metabolism,K02567,nitrate reductase (cytochrome) [EC:1.9.6.1]
+ko00910,Nitrogen metabolism,K02568,nitrate reductase (cytochrome); electron transfer subunit
+ko00910,Nitrogen metabolism,K00372,assimilatory nitrate reductase catalytic subunit [EC:1.7.99.-]
+ko00910,Nitrogen metabolism,K00360,assimilatory nitrate reductase electron transfer subunit [EC:1.7.99.-]
+ko00910,Nitrogen metabolism,K17877,nitrite reductase (NAD(P)H) [EC:1.7.1.4]
+ko00910,Nitrogen metabolism,K26139,nitrite reductase [NAD(P)H] large subunit [EC:1.7.1.4]
+ko00910,Nitrogen metabolism,K26138,nitrite reductase [NAD(P)H] small subunit [EC:1.7.1.4]
+ko00910,Nitrogen metabolism,K00361,nitrite reductase [NAD(P)H] [EC:1.7.1.4]
+ko00910,Nitrogen metabolism,K00362,nitrite reductase (NADH) large subunit [EC:1.7.1.15]
+ko00910,Nitrogen metabolism,K00363,nitrite reductase (NADH) small subunit [EC:1.7.1.15]
+ko00910,Nitrogen metabolism,K00366,ferredoxin-nitrite reductase [EC:1.7.7.1]
+ko00910,Nitrogen metabolism,K03385,nitrite reductase (cytochrome c-552) [EC:1.7.2.2]
+ko00910,Nitrogen metabolism,K15876,cytochrome c nitrite reductase small subunit
+ko00910,Nitrogen metabolism,K00368,nitrite reductase (NO-forming) [EC:1.7.2.1]
+ko00910,Nitrogen metabolism,K15864,nitrite reductase (NO-forming) / hydroxylamine reductase [EC:1.7.2.1 1.7.99.1]
+ko00910,Nitrogen metabolism,K04561,nitric oxide reductase subunit B [EC:1.7.2.5]
+ko00910,Nitrogen metabolism,K02305,nitric oxide reductase subunit C
+ko00910,Nitrogen metabolism,K15877,fungal nitric oxide reductase [EC:1.7.1.14]
+ko00910,Nitrogen metabolism,K00376,nitrous-oxide reductase [EC:1.7.2.4]
+ko00910,Nitrogen metabolism,K02586,nitrogenase molybdenum-iron protein alpha chain [EC:1.18.6.1]
+ko00910,Nitrogen metabolism,K02591,nitrogenase molybdenum-iron protein beta chain [EC:1.18.6.1]
+ko00910,Nitrogen metabolism,K02588,nitrogenase iron protein NifH
+ko00910,Nitrogen metabolism,K00531,nitrogenase delta subunit [EC:1.18.6.1]
+ko00910,Nitrogen metabolism,K22896,vanadium-dependent nitrogenase alpha chain [EC:1.18.6.2]
+ko00910,Nitrogen metabolism,K22897,vanadium-dependent nitrogenase beta chain [EC:1.18.6.2]
+ko00910,Nitrogen metabolism,K22898,vanadium nitrogenase delta subunit [EC:1.18.6.2]
+ko00910,Nitrogen metabolism,K22899,vanadium nitrogenase iron protein
+ko00910,Nitrogen metabolism,K20932,hydrazine synthase subunit [EC:1.7.2.7]
+ko00910,Nitrogen metabolism,K20933,hydrazine synthase subunit [EC:1.7.2.7]
+ko00910,Nitrogen metabolism,K20934,hydrazine synthase subunit [EC:1.7.2.7]
+ko00910,Nitrogen metabolism,K20935,hydrazine dehydrogenase [EC:1.7.2.8]
+ko00910,Nitrogen metabolism,K10944,methane/ammonia monooxygenase subunit A [EC:1.14.18.3 1.14.99.39]
+ko00910,Nitrogen metabolism,K10945,methane/ammonia monooxygenase subunit B
+ko00910,Nitrogen metabolism,K10946,methane/ammonia monooxygenase subunit C
+ko00910,Nitrogen metabolism,K05601,hydroxylamine reductase [EC:1.7.99.1]
+ko00910,Nitrogen metabolism,K10535,hydroxylamine dehydrogenase [EC:1.7.2.6]
+ko00910,Nitrogen metabolism,K00459,nitronate monooxygenase [EC:1.13.12.16]
+ko00910,Nitrogen metabolism,K19823,nitroalkane oxidase [EC:1.7.3.1]
+ko00910,Nitrogen metabolism,K01501,nitrilase [EC:3.5.5.1]
+ko00910,Nitrogen metabolism,K15371,glutamate dehydrogenase [EC:1.4.1.2]
+ko00910,Nitrogen metabolism,K00260,glutamate dehydrogenase [EC:1.4.1.2]
+ko00910,Nitrogen metabolism,K00261,glutamate dehydrogenase (NAD(P)+) [EC:1.4.1.3]
+ko00910,Nitrogen metabolism,K00262,glutamate dehydrogenase (NADP+) [EC:1.4.1.4]
+ko00910,Nitrogen metabolism,K01915,glutamine synthetase [EC:6.3.1.2]
+ko00910,Nitrogen metabolism,K00264,glutamate synthase (NADH) [EC:1.4.1.14]
+ko00910,Nitrogen metabolism,K00265,glutamate synthase (NADPH) large chain [EC:1.4.1.13]
+ko00910,Nitrogen metabolism,K00266,glutamate synthase (NADPH) small chain [EC:1.4.1.13]
+ko00910,Nitrogen metabolism,K00284,glutamate synthase (ferredoxin) [EC:1.4.7.1]
+ko00910,Nitrogen metabolism,K01948,carbamoyl-phosphate synthase (ammonia) [EC:6.3.4.16]
+ko00910,Nitrogen metabolism,K01725,cyanate lyase [EC:4.2.1.104]
+ko00910,Nitrogen metabolism,K00926,carbamate kinase [EC:2.7.2.2]
+ko00910,Nitrogen metabolism,K01672,carbonic anhydrase [EC:4.2.1.1]
+ko00910,Nitrogen metabolism,K18245,carbonic anhydrase 2 [EC:4.2.1.1]
+ko00910,Nitrogen metabolism,K18246,carbonic anhydrase 4 [EC:4.2.1.1]
+ko00910,Nitrogen metabolism,K01673,carbonic anhydrase [EC:4.2.1.1]
+ko00910,Nitrogen metabolism,K01674,carbonic anhydrase [EC:4.2.1.1]
+ko00910,Nitrogen metabolism,K01743,carbonic anhydrase [EC:4.2.1.1]
