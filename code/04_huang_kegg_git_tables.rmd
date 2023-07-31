@@ -6,26 +6,42 @@ Uses the docker image rocker/tidyverse:4.2
 library(tidyverse)
 library(stringr)
 library(data.table)
+library(collections)
+
+kegg_gene_names <- dict()
 
 kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
 
 kegg_gene$ListOfKOs <- str_sub(kegg_gene$ListOfKOs, end=-2)
 
-#TODO update path with proper keggs of interest
 keggs_of_interest <- read.table("../data/nitrogen-degradation-kegg-pathways.csv",sep=',',header = T)
 
 kegg_abundance <- read_table("../data/huang-2018/03.profiles/02.relative.KEGG.abundance/CGM-RGC.gene.abundance.xls.KEGG.KO.ratio")
 
-selected <- kegg_gene[ kegg_gene$ListOfKOs %in% keggs_of_interest$orthology,]
+selected <- kegg_abundance[ kegg_abundance$"#KEGG" %in% keggs_of_interest$orthology,]
 
-genes_of_interest <- selected$"ListOfKOs"
+selected_gene_tab <- kegg_gene[kegg_gene$ListOfKOs %in% selected$"#KEGG", ]
 
-selected_abundance <- kegg_abundance[kegg_abundance$"#KEGG" %in% genes_of_interest, ]
+#TODO need to select rows ListOfKOs and kegg_gene specifically so we can work with it
+for (item in selected_gene_tab){
+    curr_kegg <- item$ListOfKOs
+    curr_gene <- item$kegg_gene
+
+    tryCatch({
+        prev_genes <- kegg_gene_names$get(curr_kegg)
+        current_genes <- append(prev_genes, curr_gene)
+        kegg_gene_names$set(curr_kegg, current_genes)
+    }, error= function(e) {
+        kegg_gene_names$set(curr_kegg,c(curr_gene))
+    }
+    )
+}
+
 
 selected_df <- data.table(selected)
-selected_abundance_df <- data.table(selected_abundance)
+selected_gene_df <- data.table(selected_gene_tab)
 
-more_info <- merge(selected_df, selected_abundance_df, by.x="ListOfKOs", by.y="#KEGG")
+more_info <- merge(selected_df, selected_gene_df, by.x="#KEGG", by.y="ListOfKOs")
 
 write_tsv(more_info,"../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
 ```
