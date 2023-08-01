@@ -45,8 +45,11 @@ for (i in 1:length(selected$"#KEGG")){
     curr_kegg <- selected$"#KEGG"[i]
     curr_row <- selected[i,]
     curr_genes <- kegg_gene_name_list[[curr_kegg]]
-    curr_genes <- unique(curr_genes)
-    curr_row$genes <- paste(curr_genes, collapse=";")
+    freq <- data.frame(table(factor(curr_genes)))
+    freq <- freq[order(freq$Freq,decreasing=T),]
+    curr_genes <- paste(apply(freq, 1, paste0, collapse=":"),collapse=';')
+    curr_row$genes <- curr_genes
+    #curr_row$genes <- paste(curr_genes, collapse=";")
     more_info <- rbind(more_info, curr_row)
 }
 
