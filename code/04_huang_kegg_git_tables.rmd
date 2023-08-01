@@ -65,11 +65,6 @@ library(tidyverse)
 #select just gene names from kegg table so we can join on them later
 
 kegg_tab <- read_table("../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
-kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
-kegg_simp <- kegg_simp[,1]
-
-# reassing gene names to 
-kegg_tab$simple_kegg <- kegg_simp
 
 #select cols with ceca in the 5th english letter
 
@@ -81,10 +76,13 @@ abund <- rowSums(duo_samp)
 
 abund <- abund/n_samp
 
-duo_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg, kegg_tab$kegg_gene,abund)
+duo_average_table <- cbind(kegg_tab$"#KEGG",abund, kegg_tab$genes)
 
 duo_average_df <- data.frame(duo_average_table)
-colnames(duo_average_df) <- c("kegg", "simple-gene", "gene", "relative-abundance")
+colnames(duo_average_df) <- c("kegg", "rabundance", "kegggenes")
+
+
+duo_average_df <- duo_average_df[order(as.numeric(duo_average_df$rabundance),decreasing=T),]
 
 
 write_tsv(duo_average_df,"../data/huang-analysis/duo-average-gene-abundance.tsv")
@@ -98,11 +96,6 @@ library(tidyverse)
 #select just gene names from kegg table so we can join on them later
 
 kegg_tab <- read_table("../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
-kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
-kegg_simp <- kegg_simp[,1]
-
-# reassing gene names to 
-kegg_tab$simple_kegg <- kegg_simp
 
 #select cols with ceca in the 5th english letter
 
@@ -114,10 +107,12 @@ abund <- rowSums(jeju_samp)
 
 abund <- abund/n_samp
 
-jeju_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,kegg_tab$kegg_gene,abund)
+jeju_average_table <- cbind(kegg_tab$"#KEGG",abund, kegg_tab$genes)
 
 jeju_average_df <- data.frame(jeju_average_table)
-colnames(jeju_average_df) <- c("kegg", "simple-gene","gene", "relative-abundance")
+colnames(jeju_average_df) <- c("kegg", "rabundance", "kegggenes")
+
+jeju_average_df <- jeju_average_df[order(as.numeric(jeju_average_df$rabundance),decreasing=T),]
 
 
 write_tsv(jeju_average_df,"../data/huang-analysis/jeju-average-gene-abundance.tsv")
@@ -130,11 +125,6 @@ library(tidyverse)
 #select just gene names from kegg table so we can join on them later
 
 kegg_tab <- read_table("../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
-kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
-kegg_simp <- kegg_simp[,1]
-
-# reassing gene names to 
-kegg_tab$simple_kegg <- kegg_simp
 
 #select cols with ceca in the 5th english letter
 
@@ -146,11 +136,12 @@ abund <- rowSums(ileum_samp)
 
 abund <- abund/n_samp
 
-ileum_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg, kegg_tab$kegg_gene,abund)
+ileum_average_table <- cbind(kegg_tab$"#KEGG",abund, kegg_tab$genes)
 
 ileum_average_df <- data.frame(ileum_average_table)
-colnames(ileum_average_df) <- c("kegg", "simple-gene","gene", "relative-abundance")
+colnames(ileum_average_df) <- c("kegg", "rabundance", "kegggenes")
 
+ileum_average_df <- ileum_average_df[order(as.numeric(ileum_average_df$rabundance),decreasing=T),]
 
 write_tsv(ileum_average_df,"../data/huang-analysis/ileum-average-gene-abundance.tsv")
 ```
@@ -162,11 +153,6 @@ library(tidyverse)
 #select just gene names from kegg table so we can join on them later
 
 kegg_tab <- read_table("../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
-kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
-kegg_simp <- kegg_simp[,1]
-
-# reassing gene names to 
-kegg_tab$simple_kegg <- kegg_simp
 
 #select cols with ceca in the 5th english letter
 
@@ -178,11 +164,12 @@ abund <- rowSums(rect_samp)
 
 abund <- abund/n_samp
 
-rect_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,kegg_tab$kegg_gene,abund)
+rect_average_table <- cbind(kegg_tab$"#KEGG",abund, kegg_tab$genes)
 
 rect_average_df <- data.frame(rect_average_table)
-colnames(rect_average_df) <- c("kegg", "simple-gene","gene", "relative-abundance")
+colnames(rect_average_df) <- c("kegg", "rabundance", "kegggenes")
 
+rect_average_df <- rect_average_df[order(as.numeric(rect_average_df$rabundance),decreasing=T),]
 
 write_tsv(rect_average_df,"../data/huang-analysis/rect-average-gene-abundance.tsv")
 ```
@@ -194,11 +181,6 @@ library(tidyverse)
 #select just gene names from kegg table so we can join on them later
 
 kegg_tab <- read_table("../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
-kegg_simp <- str_split(kegg_tab$kegg_gene,":",simplify=T)
-kegg_simp <- kegg_simp[,1]
-
-# reassing gene names to 
-kegg_tab$simple_kegg <- kegg_simp
 
 #select cols with ceca in the 5th english letter
 
@@ -210,11 +192,11 @@ abund <- rowSums(ceca_samp)
 
 abund <- abund/n_samp
 
-ceca_average_table <- cbind(kegg_tab$ListOfKOs, kegg_tab$simple_kegg,kegg_tab$kegg_gene,abund)
+ceca_average_table <- cbind(kegg_tab$"#KEGG",abund, kegg_tab$genes)
 
 ceca_average_df <- data.frame(ceca_average_table)
-colnames(ceca_average_df) <- c("kegg", "simple-gene","gene", "relative-abundance")
-
+colnames(ceca_average_df) <- c("kegg", "rabundance", "kegggenes")
+ceca_average_df <- ceca_average_df[order(as.numeric(ceca_average_df$rabundance),decreasing=T),]
 
 write_tsv(ceca_average_df,"../data/huang-analysis/ceca-average-gene-abundance.tsv")
 ```
