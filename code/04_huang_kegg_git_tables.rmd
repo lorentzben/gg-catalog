@@ -23,9 +23,9 @@ selected <- kegg_abundance[ kegg_abundance$"#KEGG" %in% keggs_of_interest$orthol
 selected_gene_tab <- kegg_gene[kegg_gene$ListOfKOs %in% selected$"#KEGG", ]
 
 #TODO need to select rows ListOfKOs and kegg_gene specifically so we can work with it
-for (item in selected_gene_tab){
-    curr_kegg <- item$ListOfKOs
-    curr_gene <- item$kegg_gene
+for (i in 1:length(selected_gene_tab$ListOfKOs)){
+    curr_kegg <- selected_gene_tab$ListOfKOs[i]
+    curr_gene <- selected_gene_tab$kegg_gene[i]
 
     tryCatch({
         prev_genes <- kegg_gene_names$get(curr_kegg)
@@ -37,11 +37,20 @@ for (item in selected_gene_tab){
     )
 }
 
+kegg_gene_name_list <- kegg_gene_names$as_list()
 
-selected_df <- data.table(selected)
-selected_gene_df <- data.table(selected_gene_tab)
+more_info <- data.frame()
 
-more_info <- merge(selected_df, selected_gene_df, by.x="#KEGG", by.y="ListOfKOs")
+for (i in 1:length(selected$"#KEGG")){
+    curr_kegg <- selected$"#KEGG"[i]
+    curr_row <- selected[i,]
+    curr_genes <- kegg_gene_name_list[[curr_kegg]]
+    curr_genes <- unique(curr_genes)
+    curr_row$genes <- paste(curr_genes, collapse=";")
+    more_info <- rbind(more_info, curr_row)
+}
+
+#more_info <- tibble(more_info)
 
 write_tsv(more_info,"../data/huang-analysis/kegg-gene-abundance-nitrogen-abundance.tsv")
 ```
