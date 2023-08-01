@@ -200,3 +200,103 @@ ceca_average_df <- ceca_average_df[order(as.numeric(ceca_average_df$rabundance),
 
 write_tsv(ceca_average_df,"../data/huang-analysis/ceca-average-gene-abundance.tsv")
 ```
+
+```{r function to collapse average relative abundance}
+
+collapse_rabund <- function(abundance_tab, tissue){
+    samp <- abundance_tab[,str_sub(colnames(abundance_tab),5,5) == tissue]
+    n_samp <- dim(samp)[2]
+    abund <- rowSums(samp)
+    abund <- abund/n_samp
+    average_table <- cbind(abundance_tab$"#KEGG",abund)
+    average_df <- data.frame(average_table)
+    colnames(average_df) <- c("kegg", "rabundance")
+    average_df <- average_df[order(as.numeric(average_df$rabundance),decreasing=T),]
+    return(average_df)
+}
+
+```
+
+```{r rebuild table again}
+library(tidyverse)
+library(stringr)
+library(data.table)
+library(collections)
+
+kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
+
+kegg_gene$ListOfKOs <- str_sub(kegg_gene$ListOfKOs, end=-2)
+
+keggs_of_interest <- read.table("../data/nitrogen-degradation-kegg-pathways.csv",sep=',',header = T)
+
+kegg_abundance <- read_table("../data/huang-2018/03.profiles/02.relative.KEGG.abundance/CGM-RGC.gene.abundance.xls.KEGG.KO.ratio")
+
+# separate out samples by tissue
+
+duo_average_df <- collapse_rabund(kegg_abundance, "D")
+jejunum_average_df <- collapse_rabund(kegg_abundance,"J")
+ileum_average_df <- collapse_rabund(kegg_abundance,"I")
+ceca_average_df <- collapse_rabund(kegg_abundance, "C")
+rectum_average_df <- collapse_rabund(kegg_abundance, "R")
+
+# merge columns into table
+merge_1 <- merge(duo_average_df, jejunum_average_df,by='kegg')
+colnames(merge_1) <- c('kegg','duodenum','jejunum')
+merge_2 <- merge(merge_1, ileum_average_df,by='kegg')
+colnames(merge_2) <- c('kegg','duodenum','jejunum','ileum')
+merge_3 <- merge(merge_2, ceca_average_df,by='kegg')
+colnames(merge_3) <- c('kegg','duodenum','jejunum','ileum','ceca')
+merge_4 <- merge(merge_3, rectum_average_df,by='kegg')
+colnames(merge_4) <- c('kegg','duodenum','jejunum','ileum','ceca','rectum')
+
+# separate pathways out so that pathway to pathway comparisons can be done
+protein_digestion_and_absorption <- keggs_of_interest[keggs_of_interest$name == "Protein digestion and absorption",]
+gastric_acid_secretion <-  keggs_of_interest[keggs_of_interest$name == "Gastric acid secretion",]
+pancreatic_acid_secretion <- keggs_of_interest[keggs_of_interest$name == "Pancreatic secretion",]
+valine_leucine_isoleucine <- keggs_of_interest[keggs_of_interest$name == "Valine; leucine and isoleucine degradation",]
+tyrosine_metabolism <- keggs_of_interest[keggs_of_interest$name == "Tyrosine metabolism",]
+tryptophan_metabolism <- keggs_of_interest[keggs_of_interest$name == "Tryptophan metabolism",]
+alanine_aspartate_glutamate <- keggs_of_interest[keggs_of_interest$name == "Alanine; aspartate and glutamate metabolism",]
+nitrogen_metabolism <- keggs_of_interest[keggs_of_interest$name == "Nitrogen metabolism",]
+```
+
+
+```{r protein digestion and absorption}
+
+# filter the kegg abundance and gene tables based on the protein pathway
+selected_protein <- kegg_abundance[ kegg_abundance$"#KEGG" %in% protein_digestion_and_absorption$orthology,]
+selected_gene_protein <- kegg_gene[kegg_gene$ListOfKOs %in% selected_protein$"#KEGG", ]
+kegg_gene_names <- dict()
+
+for (i in 1:length(selected_gene_protein$ListOfKOs)){
+    curr_kegg <- selected_gene_protein$ListOfKOs[i]
+    curr_gene <- selected_gene_protein$kegg_gene[i]
+
+    tryCatch({
+        prev_genes <- kegg_gene_names$get(curr_kegg)
+        current_genes <- append(prev_genes, curr_gene)
+        kegg_gene_names$set(curr_kegg, current_genes)
+    }, error= function(e) {
+        kegg_gene_names$set(curr_kegg,c(curr_gene))
+    }
+    )
+}
+
+protein_kegg_gene_name_list <- kegg_gene_names$as_list()
+
+more_info_protein <- data.frame()
+
+for (i in 1:length(selected_protein$"#KEGG")){
+    curr_kegg <- selected_protein$"#KEGG"[i]
+    curr_row <- selected_protein[i,]
+    curr_genes <- protein_kegg_gene_name_list[[curr_kegg]]
+    freq <- data.frame(table(factor(curr_genes)))
+    freq <- freq[order(freq$Freq,decreasing=T),]
+    curr_genes <- paste(apply(freq, 1, paste0, collapse=":"),collapse=';')
+    curr_row$genes <- curr_genes
+    #curr_row$genes <- paste(curr_genes, collapse=";")
+    more_info <- rbind(more_info, curr_row)
+}
+
+#write_tsv(more_info,"../data/huang-analysis/kegg-gene-abundance-protein-digestion-and-absorption.tsv")
+```
