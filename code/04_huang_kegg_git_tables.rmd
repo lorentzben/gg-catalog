@@ -215,6 +215,53 @@ collapse_rabund <- function(abundance_tab, tissue){
     return(average_df)
 }
 
+# Take in a column of average relative abundance, and a list of keggs
+
+generate_kegg_gene_list <- function(kegg_abundance, pathway_table, kegg_gene ){
+
+    selected <- kegg_abundance[ kegg_abundance$kegg %in% pathway_table$orthology,]
+    selected_gene <- kegg_gene[kegg_gene$ListOfKOs %in% selected$kegg, ]
+    kegg_gene_names <- dict()
+
+    for (i in 1:length(selected_gene$ListOfKOs)){
+        curr_kegg <- selected_gene$ListOfKOs[i]
+        curr_gene <- selected_gene$kegg_gene[i]
+
+        tryCatch({
+            prev_genes <- kegg_gene_names$get(curr_kegg)
+            current_genes <- append(prev_genes, curr_gene)
+            kegg_gene_names$set(curr_kegg, current_genes)
+        }, error= function(e) {
+            kegg_gene_names$set(curr_kegg,c(curr_gene))
+        }
+        )
+    }
+
+    kegg_gene_name_list <- kegg_gene_names$as_list()
+    return(list(selected, kegg_gene_name_list))
+}
+
+generate_more_info_table <- function(selected, kegg_gene_name_list, filepath){
+    more_info <- data.frame()
+
+    for (i in 1:length(selected$kegg)){
+        curr_kegg <- selected$kegg[i]
+        curr_row <- selected[i,]
+        curr_genes <- kegg_gene_name_list[[1]][[curr_kegg]]
+        freq <- data.frame(table(factor(curr_genes)))
+        freq <- freq[order(freq$Freq,decreasing=T),]
+        curr_genes <- paste(apply(freq, 1, paste0, collapse=":"),collapse=';')
+        curr_row$genes <- curr_genes
+        #curr_row$genes <- paste(curr_genes, collapse=";")
+        more_info <- rbind(more_info, curr_row)
+    }
+
+    write_tsv(more_info,filepath)
+    return(more_info)
+}
+
+
+
 ```
 
 ```{r rebuild table again}
@@ -239,7 +286,7 @@ ileum_average_df <- collapse_rabund(kegg_abundance,"I")
 ceca_average_df <- collapse_rabund(kegg_abundance, "C")
 rectum_average_df <- collapse_rabund(kegg_abundance, "R")
 
-# merge columns into table
+# TODO do we need to do this? merge columns into table
 merge_1 <- merge(duo_average_df, jejunum_average_df,by='kegg')
 colnames(merge_1) <- c('kegg','duodenum','jejunum')
 merge_2 <- merge(merge_1, ileum_average_df,by='kegg')
@@ -258,45 +305,60 @@ tyrosine_metabolism <- keggs_of_interest[keggs_of_interest$name == "Tyrosine met
 tryptophan_metabolism <- keggs_of_interest[keggs_of_interest$name == "Tryptophan metabolism",]
 alanine_aspartate_glutamate <- keggs_of_interest[keggs_of_interest$name == "Alanine; aspartate and glutamate metabolism",]
 nitrogen_metabolism <- keggs_of_interest[keggs_of_interest$name == "Nitrogen metabolism",]
+
+
 ```
 
+```{r duodenum analysis}
 
-```{r protein digestion and absorption}
+duo_protein_gene_list <- generate_kegg_gene_list(duo_average_df, protein_digestion_and_absorption, kegg_gene)
+duo_protein_more_info <- generate_more_info_table(data.frame(duo_protein_gene_list[1]),duo_protein_gene_list[2],"../data/huang-analysis/duo-protein-digestion-and-absorption.tsv")
 
-# filter the kegg abundance and gene tables based on the protein pathway
-selected_protein <- kegg_abundance[ kegg_abundance$"#KEGG" %in% protein_digestion_and_absorption$orthology,]
-selected_gene_protein <- kegg_gene[kegg_gene$ListOfKOs %in% selected_protein$"#KEGG", ]
-kegg_gene_names <- dict()
+duo_gastric_gene_list <-
+duo_gastric_more_info <- 
 
-for (i in 1:length(selected_gene_protein$ListOfKOs)){
-    curr_kegg <- selected_gene_protein$ListOfKOs[i]
-    curr_gene <- selected_gene_protein$kegg_gene[i]
+duo_pancreatic_acid_gene_list <-
+duo_pancreatic_more_info <- 
 
-    tryCatch({
-        prev_genes <- kegg_gene_names$get(curr_kegg)
-        current_genes <- append(prev_genes, curr_gene)
-        kegg_gene_names$set(curr_kegg, current_genes)
-    }, error= function(e) {
-        kegg_gene_names$set(curr_kegg,c(curr_gene))
-    }
-    )
-}
+duo_valine_gene_list <-
+duo_valine_more_info <-
 
-protein_kegg_gene_name_list <- kegg_gene_names$as_list()
+duo_tyrosine_gene_list <-
+duo_tyrosine_more_info <-
 
-more_info_protein <- data.frame()
+duo_tryptophan_gene_list <-
+duo_tryptophan_more_info <-
 
-for (i in 1:length(selected_protein$"#KEGG")){
-    curr_kegg <- selected_protein$"#KEGG"[i]
-    curr_row <- selected_protein[i,]
-    curr_genes <- protein_kegg_gene_name_list[[curr_kegg]]
-    freq <- data.frame(table(factor(curr_genes)))
-    freq <- freq[order(freq$Freq,decreasing=T),]
-    curr_genes <- paste(apply(freq, 1, paste0, collapse=":"),collapse=';')
-    curr_row$genes <- curr_genes
-    #curr_row$genes <- paste(curr_genes, collapse=";")
-    more_info <- rbind(more_info, curr_row)
-}
+duo_alanine_gene_list <- 
+duo_alanine_more_info <- 
 
-#write_tsv(more_info,"../data/huang-analysis/kegg-gene-abundance-protein-digestion-and-absorption.tsv")
+duo_nitrogen_gene_list <-
+duo_nitrogen_more_info <-
+```
+
+```{r jejunum analysis}
+
+jejunum_protein_gene_list <- generate_kegg_gene_list(jejunun_average_df, protein_digestion_and_absorption, kegg_gene)
+jejunum_protein_more_info <- generate_more_info_table(data.frame(jejunum_protein_gene_list[1]),jejunum_protein_gene_list[2],"../data/huang-analysis/jejunum-protein-digestion-and-absorption.tsv")
+
+jejunum_gastric_gene_list <-
+jejunum_gastric_more_info <- 
+
+jejunum_pancreatic_acid_gene_list <-
+jejunum_pancreatic_more_info <- 
+
+jejunum_valine_gene_list <-
+jejunum_valine_more_info <-
+
+jejunum_tyrosine_gene_list <-
+jejunum_tyrosine_more_info <-
+
+jejunum_tryptophan_gene_list <-
+jejunum_tryptophan_more_info <-
+
+jejunum_alanine_gene_list <- 
+jejunum_alanine_more_info <- 
+
+jejunum_nitrogen_gene_list <-
+jejunum_nitrogen_more_info <-
 ```
