@@ -270,9 +270,10 @@ library(stringr)
 library(data.table)
 library(collections)
 
-kegg_gene <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
+kegg_gene_raw <- read_table("../data/huang-2018/02.gene.annotation/CGM-RGC.KEGG.gene.stat")
 
-kegg_gene$ListOfKOs <- str_sub(kegg_gene$ListOfKOs, end=-2)
+#kegg_gene <- kegg_gene_raw
+kegg_gene_raw$ListOfKOs <- str_sub(kegg_gene_raw$ListOfKOs, end=-2)
 
 keggs_of_interest <- read.table("../data/nitrogen-degradation-kegg-pathways.csv",sep=',',header = T)
 
@@ -310,55 +311,131 @@ nitrogen_metabolism <- keggs_of_interest[keggs_of_interest$name == "Nitrogen met
 ```
 
 ```{r duodenum analysis}
-
-duo_protein_gene_list <- generate_kegg_gene_list(duo_average_df, protein_digestion_and_absorption, kegg_gene)
+duo_protein_gene_list <- generate_kegg_gene_list(duo_average_df, protein_digestion_and_absorption, kegg_gene_raw)
 duo_protein_more_info <- generate_more_info_table(data.frame(duo_protein_gene_list[1]),duo_protein_gene_list[2],"../data/huang-analysis/duo-protein-digestion-and-absorption.tsv")
 
-duo_gastric_gene_list <-
-duo_gastric_more_info <- 
+duo_gastric_gene_list <- generate_kegg_gene_list(duo_average_df, gastric_acid_secretion, kegg_gene_raw)
+duo_gastric_more_info <- generate_more_info_table(data.frame(duo_gastric_gene_list[1]),duo_gastric_gene_list[2],"../data/huang-analysis/duo-gastric-acid-secretion.tsv")
 
-duo_pancreatic_acid_gene_list <-
-duo_pancreatic_more_info <- 
+duo_pancreatic_acid_gene_list <- generate_kegg_gene_list(duo_average_df, pancreatic_acid_secretion, kegg_gene_raw)
+duo_pancreatic_more_info <- generate_more_info_table(data.frame(duo_pancreatic_acid_gene_list[1]),duo_pancreatic_acid_gene_list[2],"../data/huang-analysis/duo-pancreatic-acid-secretion.tsv")
 
-duo_valine_gene_list <-
-duo_valine_more_info <-
+duo_valine_gene_list <- generate_kegg_gene_list(duo_average_df, valine_leucine_isoleucine, kegg_gene_raw)
+duo_valine_more_info <- generate_more_info_table(data.frame(duo_valine_gene_list[1]),duo_valine_gene_list[2],"../data/huang-analysis/duo-valine-leucine-isoleucine.tsv")
 
-duo_tyrosine_gene_list <-
-duo_tyrosine_more_info <-
+duo_tyrosine_gene_list <- generate_kegg_gene_list(duo_average_df, tyrosine_metabolism, kegg_gene_raw)
+duo_tyrosine_more_info <- generate_more_info_table(data.frame(duo_tyrosine_gene_list[1]),duo_tyrosine_gene_list[2],"../data/huang-analysis/duo-tyrosine-metabolism.tsv")
 
-duo_tryptophan_gene_list <-
-duo_tryptophan_more_info <-
+duo_tryptophan_gene_list <- generate_kegg_gene_list(duo_average_df, tryptophan_metabolism , kegg_gene_raw)
+duo_tryptophan_more_info <- generate_more_info_table(data.frame(duo_tryptophan_gene_list[1]),duo_tryptophan_gene_list[2],"../data/huang-analysis/duo-tryptophan-metabolism.tsv")
 
-duo_alanine_gene_list <- 
-duo_alanine_more_info <- 
+duo_alanine_gene_list <- generate_kegg_gene_list(duo_average_df, alanine_aspartate_glutamate, kegg_gene_raw)
+duo_alanine_more_info <- generate_more_info_table(data.frame(duo_alanine_gene_list[1]),duo_alanine_gene_list[2],"../data/huang-analysis/duo-alanine-aspartate-glutamate.tsv")
 
-duo_nitrogen_gene_list <-
-duo_nitrogen_more_info <-
+duo_nitrogen_gene_list <- generate_kegg_gene_list(duo_average_df, nitrogen_metabolism, kegg_gene_raw)
+duo_nitrogen_more_info <- generate_more_info_table(data.frame(duo_nitrogen_gene_list[1]),duo_nitrogen_gene_list[2],"../data/huang-analysis/duo-nitrogen-metabolism.tsv")
 ```
 
 ```{r jejunum analysis}
-
-jejunum_protein_gene_list <- generate_kegg_gene_list(jejunun_average_df, protein_digestion_and_absorption, kegg_gene)
+jejunum_protein_gene_list <- generate_kegg_gene_list(jejunum_average_df, protein_digestion_and_absorption, kegg_gene_raw)
 jejunum_protein_more_info <- generate_more_info_table(data.frame(jejunum_protein_gene_list[1]),jejunum_protein_gene_list[2],"../data/huang-analysis/jejunum-protein-digestion-and-absorption.tsv")
 
-jejunum_gastric_gene_list <-
-jejunum_gastric_more_info <- 
+jejunum_gastric_gene_list <- generate_kegg_gene_list(jejunum_average_df, gastric_acid_secretion, kegg_gene_raw)
+jejunum_gastric_more_info <- generate_more_info_table(data.frame(jejunum_gastric_gene_list[1]),jejunum_gastric_gene_list[2],"../data/huang-analysis/jejunum-gastric-acid-secretion.tsv")
 
-jejunum_pancreatic_acid_gene_list <-
-jejunum_pancreatic_more_info <- 
+jejunum_pancreatic_acid_gene_list <- generate_kegg_gene_list(jejunum_average_df, pancreatic_acid_secretion, kegg_gene_raw)
+jejunum_pancreatic_more_info <- generate_more_info_table(data.frame(jejunum_pancreatic_acid_gene_list[1]),jejunum_pancreatic_acid_gene_list[2],"../data/huang-analysis/jejunum-pancreatic-acid-secretion.tsv")
 
-jejunum_valine_gene_list <-
-jejunum_valine_more_info <-
+jejunum_valine_gene_list <- generate_kegg_gene_list(jejunum_average_df, valine_leucine_isoleucine, kegg_gene_raw)
+jejunum_valine_more_info <- generate_more_info_table(data.frame(jejunum_valine_gene_list[1]),jejunum_valine_gene_list[2],"../data/huang-analysis/jejunum-valine-leucine-isoleucine.tsv")
 
-jejunum_tyrosine_gene_list <-
-jejunum_tyrosine_more_info <-
+jejunum_tyrosine_gene_list <- generate_kegg_gene_list(jejunum_average_df, tyrosine_metabolism, kegg_gene_raw)
+jejunum_tyrosine_more_info <- generate_more_info_table(data.frame(jejunum_tyrosine_gene_list[1]),jejunum_tyrosine_gene_list[2],"../data/huang-analysis/jejunum-tyrosine-metabolism.tsv")
 
-jejunum_tryptophan_gene_list <-
-jejunum_tryptophan_more_info <-
+jejunum_tryptophan_gene_list <- generate_kegg_gene_list(jejunum_average_df, tryptophan_metabolism , kegg_gene_raw)
+jejunum_tryptophan_more_info <- generate_more_info_table(data.frame(jejunum_tryptophan_gene_list[1]),jejunum_tryptophan_gene_list[2],"../data/huang-analysis/jejunum-tryptophan-metabolism.tsv")
 
-jejunum_alanine_gene_list <- 
-jejunum_alanine_more_info <- 
+jejunum_alanine_gene_list <- generate_kegg_gene_list(jejunum_average_df, alanine_aspartate_glutamate , kegg_gene_raw)
+jejunum_alanine_more_info <- generate_more_info_table(data.frame(jejunum_alanine_gene_list[1]),jejunum_alanine_gene_list[2],"../data/huang-analysis/jejunum-alanine-aspartate-glutamate.tsv")
 
-jejunum_nitrogen_gene_list <-
-jejunum_nitrogen_more_info <-
+jejunum_nitrogen_gene_list <- generate_kegg_gene_list(jejunum_average_df, nitrogen_metabolism, kegg_gene_raw)
+jejunum_nitrogen_more_info <- generate_more_info_table(data.frame(jejunum_nitrogen_gene_list[1]),jejunum_nitrogen_gene_list[2],"../data/huang-analysis/jejunum-nitrogen-metabolism.tsv")
+```
+
+```{r ileum analysis}
+ileum_protein_gene_list <- generate_kegg_gene_list(ileum_average_df, protein_digestion_and_absorption, kegg_gene_raw)
+ileum_protein_more_info <- generate_more_info_table(data.frame(ileum_protein_gene_list[1]),ileum_protein_gene_list[2],"../data/huang-analysis/ileum-protein-digestion-and-absorption.tsv")
+
+ileum_gastric_gene_list <- generate_kegg_gene_list(ileum_average_df, gastric_acid_secretion, kegg_gene_raw)
+ileum_gastric_more_info <- generate_more_info_table(data.frame(ileum_gastric_gene_list[1]),ileum_gastric_gene_list[2],"../data/huang-analysis/ileum-gastric-acid-secretion.tsv")
+
+ileum_pancreatic_acid_gene_list <- generate_kegg_gene_list(ileum_average_df, pancreatic_acid_secretion, kegg_gene_raw)
+ileum_pancreatic_more_info <- generate_more_info_table(data.frame(ileum_pancreatic_acid_gene_list[1]),ileum_pancreatic_acid_gene_list[2],"../data/huang-analysis/ileum-pancreatic-acid-secretion.tsv")
+
+ileum_valine_gene_list <- generate_kegg_gene_list(ileum_average_df, valine_leucine_isoleucine, kegg_gene_raw)
+ileum_valine_more_info <- generate_more_info_table(data.frame(ileum_valine_gene_list[1]),ileum_valine_gene_list[2],"../data/huang-analysis/ileum-valine-leucine-isoleucine.tsv")
+
+ileum_tyrosine_gene_list <- generate_kegg_gene_list(ileum_average_df, tyrosine_metabolism, kegg_gene_raw)
+ileum_tyrosine_more_info <- generate_more_info_table(data.frame(ileum_tyrosine_gene_list[1]),ileum_tyrosine_gene_list[2],"../data/huang-analysis/ileum-tyrosine-metabolism.tsv")
+
+ileum_tryptophan_gene_list <- generate_kegg_gene_list(ileum_average_df, tryptophan_metabolism , kegg_gene_raw)
+ileum_tryptophan_more_info <- generate_more_info_table(data.frame(ileum_tryptophan_gene_list[1]),ileum_tryptophan_gene_list[2],"../data/huang-analysis/ileum-tryptophan-metabolism.tsv")
+
+ileum_alanine_gene_list <- generate_kegg_gene_list(ileum_average_df, alanine_aspartate_glutamate , kegg_gene_raw)
+ileum_alanine_more_info <- generate_more_info_table(data.frame(ileum_alanine_gene_list[1]),ileum_alanine_gene_list[2],"../data/huang-analysis/ileum-alanine-aspartate-glutamate.tsv")
+
+ileum_nitrogen_gene_list <- generate_kegg_gene_list(ileum_average_df, nitrogen_metabolism, kegg_gene_raw)
+ileum_nitrogen_more_info <- generate_more_info_table(data.frame(ileum_nitrogen_gene_list[1]),ileum_nitrogen_gene_list[2],"../data/huang-analysis/ileum-nitrogen-metabolism.tsv")
+```
+
+```{r ceca analysis}
+ceca_protein_gene_list <- generate_kegg_gene_list(ceca_average_df, protein_digestion_and_absorption, kegg_gene_raw)
+ceca_protein_more_info <- generate_more_info_table(data.frame(ceca_protein_gene_list[1]),ceca_protein_gene_list[2],"../data/huang-analysis/ceca-protein-digestion-and-absorption.tsv")
+
+ceca_gastric_gene_list <- generate_kegg_gene_list(ceca_average_df, gastric_acid_secretion, kegg_gene_raw)
+ceca_gastric_more_info <- generate_more_info_table(data.frame(ceca_gastric_gene_list[1]),ceca_gastric_gene_list[2],"../data/huang-analysis/ceca-gastric-acid-secretion.tsv")
+
+ceca_pancreatic_acid_gene_list <- generate_kegg_gene_list(ceca_average_df,  pancreatic_acid_secretion, kegg_gene_raw)
+ceca_pancreatic_more_info <- generate_more_info_table(data.frame(ceca_pancreatic_acid_gene_list[1]),ceca_pancreatic_acid_gene_list[2],"../data/huang-analysis/ceca-pancreatic-acid-secretion.tsv")
+
+ceca_valine_gene_list <- generate_kegg_gene_list(ceca_average_df,  valine_leucine_isoleucine, kegg_gene_raw)
+ceca_valine_more_info <- generate_more_info_table(data.frame(ceca_valine_gene_list[1]),ceca_valine_gene_list[2],"../data/huang-analysis/ceca-valine-leucine-isoleucine.tsv")
+
+ceca_tyrosine_gene_list <- generate_kegg_gene_list(ceca_average_df,  tyrosine_metabolism, kegg_gene_raw)
+ceca_tyrosine_more_info <- generate_more_info_table(data.frame(ceca_tyrosine_gene_list[1]),ceca_tyrosine_gene_list[2],"../data/huang-analysis/ceca-tyrosine-metabolism.tsv")
+
+ceca_tryptophan_gene_list <- generate_kegg_gene_list(ceca_average_df, tryptophan_metabolism , kegg_gene_raw)
+ceca_tryptophan_more_info <- generate_more_info_table(data.frame(ceca_tryptophan_gene_list[1]),ceca_tryptophan_gene_list[2],"../data/huang-analysis/ceca-tryptophan-metabolism.tsv")
+
+ceca_alanine_gene_list <- generate_kegg_gene_list(ceca_average_df, alanine_aspartate_glutamate , kegg_gene_raw)
+ceca_alanine_more_info <- generate_more_info_table(data.frame(ceca_alanine_gene_list[1]),ceca_alanine_gene_list[2],"../data/huang-analysis/ceca-alanine-aspartate-glutamate.tsv")
+
+ceca_nitrogen_gene_list <- generate_kegg_gene_list(ceca_average_df, nitrogen_metabolism, kegg_gene_raw)
+ceca_nitrogen_more_info <- generate_more_info_table(data.frame(ceca_nitrogen_gene_list[1]),ceca_nitrogen_gene_list[2],"../data/huang-analysis/ceca-nitrogen-metabolism.tsv")
+```
+
+```{r rectum analysis}
+rectum_protein_gene_list <- generate_kegg_gene_list(rectum_average_df, protein_digestion_and_absorption, kegg_gene_raw)
+rectum_protein_more_info <- generate_more_info_table(data.frame(rectum_protein_gene_list[1]),rectum_protein_gene_list[2],"../data/huang-analysis/rectum-protein-digestion-and-absorption.tsv")
+
+rectum_gastric_gene_list <- generate_kegg_gene_list(rectum_average_df, gastric_acid_secretion, kegg_gene_raw)
+rectum_gastric_more_info <- generate_more_info_table(data.frame(rectum_gastric_gene_list[1]),rectum_gastric_gene_list[2],"../data/huang-analysis/rectum-gastric-acid-secretion.tsv")
+
+rectum_pancreatic_acid_gene_list <- generate_kegg_gene_list(rectum_average_df, pancreatic_acid_secretion, kegg_gene_raw)
+rectum_pancreatic_more_info <- generate_more_info_table(data.frame(rectum_pancreatic_gene_list[1]),rectum_pancreatic_gene_list[2],"../data/huang-analysis/rectum-pancreatic-acid-secretion.tsv")
+
+rectum_valine_gene_list <- generate_kegg_gene_list(rectum_average_df, valine_leucine_isoleucine, kegg_gene_raw)
+rectum_valine_more_info <- generate_more_info_table(data.frame(rectum_valine_gene_list[1]),rectum_valine_gene_list[2],"../data/huang-analysis/rectum-valine-leucine-isoleucine.tsv")
+
+rectum_tyrosine_gene_list <- generate_kegg_gene_list(rectum_average_df, tyrosine_metabolism, kegg_gene_raw)
+rectum_tyrosine_more_info <- generate_more_info_table(data.frame(rectum_tyrosine_gene_list[1]),rectum_tyrosine_gene_list[2],"../data/huang-analysis/rectum-tyrosine-metabolism.tsv")
+
+rectum_tryptophan_gene_list <- generate_kegg_gene_list(rectum_average_df, tryptophan_metabolism , kegg_gene_raw)
+rectum_tryptophan_more_info <- generate_more_info_table(data.frame(rectum_tryptophan_gene_list[1]),rectum_tryptophan_gene_list[2],"../data/huang-analysis/rectum-tryptophan-metabolism.tsv")
+
+rectum_alanine_gene_list <- generate_kegg_gene_list(rectum_average_df, alanine_aspartate_glutamate, kegg_gene_raw)
+rectum_alanine_more_info <- generate_more_info_table(data.frame(rectum_alanine_gene_list[1]),rectum_alanine_gene_list[2],"../data/huang-analysis/rectum-alanine-aspartate-glutamate.tsv")
+
+rectum_nitrogen_gene_list <- generate_kegg_gene_list(rectum_average_df, nitrogen_metabolism, kegg_gene_raw)
+rectum_nitrogen_more_info <- generate_more_info_table(data.frame(rectum_nitrogen_gene_list[1]),rectum_nitrogen_gene_list[2],"../data/huang-analysis/rectum-nitrogen-metabolism.tsv")
 ```
